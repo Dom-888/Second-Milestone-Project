@@ -2,7 +2,7 @@
 body {
     /* The background image was designed by the artist Hello-Pixel and was downloaded from http://www.freepik.com */
     /* A fallback color has been set, in case the browser fails to load the image */
-    background: url(../images/background.jpg) #BEEFFE;
+    background: url(../images/background.jpg) #81DAFC; 
 }
 
 #gameplay {
@@ -14,6 +14,8 @@ body {
 .container {
     border: solid 3px black;
 }
+
+/*---------------Modals---------------*/
 
 .modal {
     height: auto;
@@ -28,13 +30,45 @@ body {
     transform: translate(-50%, -50%);
 }
 
-#introModal {
+.modal-introduction {
     text-align: center;
     background-color: red;
     color: #000;
 }
 
+.modal-selection {
+
+}
+
+.modal-help {
+
+}
+
+
+/*---------------Buttons---------------*/
+
 #playButton {
     font-weight: 700;
     font-size: xx-large;
+}
+
+.btn{
+    
+}
+
+/* Call-To-Action buttons used in introduction and selection modals */
+.btn-action {
+    background-color: #81DAFC;
+}
+
+.btn-keyboard {
+    
+}
+
+.btn-toggle-audio {
+    
+}
+
+.btn-toggle-help {
+    
 }
