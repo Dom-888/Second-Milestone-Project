@@ -1,4 +1,22 @@
-.container {
+
+#gameplay {
     background-color: yellow;
-    height: 800px;
+    height: 400px;
+}
+
+.container {
+    border: solid 3px black;
+}
+
+.modal {
+    
+    /* Places the modals in the center of the screen */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#introModal {
+    text-align: center;
 }
