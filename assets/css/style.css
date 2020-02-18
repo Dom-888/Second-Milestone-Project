@@ -1,7 +1,8 @@
 
 #gameplay {
+    margin-top: 10vh;
     background-color: yellow;
-    height: 400px;
+    height: 600px;
 }
 
 .container {
@@ -9,7 +10,11 @@
 }
 
 .modal {
-    
+    height: auto;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 912px; 
+
     /* Places the modals in the center of the screen */
     position: absolute;
     top: 50%;
@@ -19,4 +24,7 @@
 
 #introModal {
     text-align: center;
+    background-color: red;
+    color: #000;
 }
+
