@@ -1,8 +1,14 @@
 
+body {
+    /* The background image was designed by the artist Hello-Pixel and was downloaded from http://www.freepik.com */
+    /* A fallback color has been set, in case the browser fails to load the image */
+    background: url(../images/background.jpg) #BEEFFE;
+}
+
 #gameplay {
     margin-top: 10vh;
     background-color: yellow;
-    height: 600px;
+    height: 500px;
 }
 
 .container {
