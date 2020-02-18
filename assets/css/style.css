@@ -34,3 +34,7 @@ body {
     color: #000;
 }
 
+#playButton {
+    font-weight: 700;
+    font-size: xx-large;
+}
