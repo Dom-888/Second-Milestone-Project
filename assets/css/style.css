@@ -6,25 +6,32 @@ body {
     /* The background image was designed by Hello-Pixel and was downloaded from http://www.freepik.com */
     /* A fallback color has been set, in case the browser fails to load the image */
     background: url(../images/background.jpg) #81DAFC; 
+
+    font-family: "roboto", sans-serif;
 }
 
 #gameplay {
     margin-top: 10vh;
     height: 80vh;
-    background-color: yellow;
+    background-image: radial-gradient(#FDF6E3, #fde1ab);
 }
 
-.container {
-    border: solid 3px black;
+/* Cartoon-like borders */
+.container,.modal,.btn  {
+    border: 3px solid #000;
+    border-radius: 10px;
 }
 
 /*---------------Modals---------------*/
 
 .modal {
     height: auto;
-    border-radius: 10px;
+    color: #000;
+    /* background-color: rgba(255,255,255,.8); */
+    background-color: #fff;
     width: 80%;
     max-width: 912px; 
+    padding: 20px;
 
     /* Places the modals in the center of the screen */
     position: absolute;
@@ -35,8 +42,7 @@ body {
 
 .modal-introduction {
     text-align: center;
-    background-color: red;
-    color: #000;
+
 }
 
 .modal-selection {
@@ -51,8 +57,6 @@ body {
 /*---------------Buttons---------------*/
 
 #playButton {
-    font-weight: 700;
-    font-size: xx-large;
 }
 
 .btn{
@@ -61,6 +65,9 @@ body {
 
 /* Call-To-Action buttons used in introduction and selection modals */
 .btn-action {
+    font-size: 2em;
+    margin: 15px;
+    font-weight: 500;
     background-color: #81DAFC;
 }
 
