@@ -1,14 +1,17 @@
 
+/* Fonts imported from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,500,600|Roboto:400,500&display=swap');
+
 body {
-    /* The background image was designed by the artist Hello-Pixel and was downloaded from http://www.freepik.com */
+    /* The background image was designed by Hello-Pixel and was downloaded from http://www.freepik.com */
     /* A fallback color has been set, in case the browser fails to load the image */
     background: url(../images/background.jpg) #81DAFC; 
 }
 
 #gameplay {
     margin-top: 10vh;
+    height: 80vh;
     background-color: yellow;
-    height: 500px;
 }
 
 .container {
