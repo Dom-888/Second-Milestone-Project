@@ -17,7 +17,7 @@ body {
 }
 
 /* Cartoon-like borders */
-.container,.modal,.btn  {
+.container,.modal-content,.btn  {
     border: 3px solid #000;
     border-radius: 10px;
 }
@@ -25,22 +25,21 @@ body {
 /*---------------Modals---------------*/
 
 .modal {
-    height: auto;
     color: #000;
-    /* background-color: rgba(255,255,255,.8); */
-    background-color: #fff;
-    width: 80%;
-    max-width: 912px; 
-    padding: 20px;
+    padding: 0 7.5%;
 
-    /* Places the modals in the center of the screen */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
-.modal-introduction {
+.modal-content {
+    /* background-color: red; */
+    padding: 20px;
+}
+
+.modal-dialog {
+    /* background-color: blue; */
+}
+
+#introductionModal {
     text-align: center;
 
 }
@@ -65,8 +64,9 @@ body {
 
 /* Call-To-Action buttons used in introduction and selection modals */
 .btn-action {
+    width: 150px;
     font-size: 2em;
-    margin: 15px;
+    margin: 15px auto;
     font-weight: 500;
     background-color: #81DAFC;
 }
