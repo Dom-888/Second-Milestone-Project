@@ -5,10 +5,14 @@ $(document).ready(function () {
         backdrop: 'static',
         keyboard: false
     })
-    
+    // The closing of this dialog is handled in line, for now
+
+
     $("#playButton").click(function () {
-        $("#selectionModal").modal("show");
+        $("#selectionModal").modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+
     });
-
-
 });
