@@ -72,7 +72,7 @@ body {
 }
 
 .btn{
-    
+    display: block;
 }
 
 /* Call-To-Action buttons used in introduction and selection modals */
