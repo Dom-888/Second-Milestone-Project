@@ -13,6 +13,7 @@ $(document).ready(function () {
             backdrop: 'static',
             keyboard: false
         });
+        $("#introductionModal").modal("hide");
     });
 
     // Arrays containing the words to guess
@@ -57,6 +58,7 @@ $(document).ready(function () {
         },
 
         initiate: function () {
+            $("#selectionModal").modal("hide");
             console.log(wordToGuess);
         }
     };
