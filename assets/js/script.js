@@ -13,16 +13,46 @@ $(document).ready(function () {
             backdrop: 'static',
             keyboard: false
         });
-
     });
 
     // Arrays containing the words to guess
-    const wordToGuess = {
-        all: animals.concat(movie, sports, cities, jobs),
+    const words = {
         animals: ["ELEPHANT", "CROCODILE", "RABBIT", "EAGLE", "LION", "PANDA", "GIRAFFE", "FROG", "WHALE", "CHAMELEON", "OCTOPUS", "DOLPHIN", "ZEBRA", "WOLF", "FOX", "FALCON", "ARMADILLO", "BEETLE", "KOALA", "JAGUAR"],
         movies: ["JURASSIC PARK", "THE BIG LEBOWSKI", "PULP FICTION", "THE WIZARD OF OZ", "FORREST GUMP", "JAWS", "APOCALYPSE NOW", "THE LORDS OF THE RINGS", "INCEPTION", "A CLOCKWORK ORANGE", "FULL METAL JACKET", "FIGHT CLUB", "THE MATRIX", "JOKER", "GLADIATOR", "BLADE RUNNER", "MAD MAX", "ALIEN", "BACK TO THE FUTURE", "STAR WARS"],
         sports: ["FOOTBALL", "CRICKET", "BASKETBALL", "HOCKEY", "TENNIS", "VOLLEYBALL", "GOLF", "RUGBY", "BOXING", "SKIING", "ARCHERY", "HANDBALL", "FENCING", "MARATHON"],
         cities: ["TIRANA", "VIENNA", "BRUSSELS", "SOFIA", "PRAGUE", "COPENHAGEN", "BERLIN", "ATHENS", "BUDAPEST", "AMSTERDAM", "MONACO", "LONDON", "ROME", "SYDNEY", "MOSCOW", "STOCKHOLM", "INSTANBUL", "DUBLIN", "HONG KONG", "NEW YORK", "RIO DE JANEIRO"],
-        jobs: ["SOMMELIER", "TAXI DRIVER", "PLUMBER", "DEVELOPER", "TRAINER", "TAILOR", "COOK", "TEACHER", "BARISTA", "BARBER", "FARMER", "LAWYER", "NURSE", "SURGEON", "ELECTRICIAN", "JOURNALIST", "FIREMAN", "ENGINEER", "SALESMAN", "LIFEGUARD", "DETECTIVE"]
+        jobs: ["SOMMELIER", "TAXI DRIVER", "PLUMBER", "DEVELOPER", "TRAINER", "TAILOR", "COOK", "TEACHER", "BARISTA", "BARBER", "FARMER", "LAWYER", "NURSE", "SURGEON", "ELECTRICIAN", "JOURNALIST", "FIREMAN", "ENGINEER", "SALESMAN", "LIFEGUARD", "DETECTIVE"],
+        // all = animals.concat(movies, sports, cities, jobs)
     }
+
+    // Global variables
+    let wordToGuess;
+
+
+    const game = {
+        // Draws a random word from user selected theme and initiates the game
+        selectWord: {
+            animals: function () {
+                wordToGuess = words.animals[Math.floor(Math.random() * words.animals.length)];
+                game.initiate()
+            },
+            movies: function () {
+                wordToGuess = words.movies[Math.floor(Math.random() * words.movies.length)];
+                game.initiate()
+            }
+        },
+
+        initiate: function () {
+            console.log(wordToGuess);
+        }
+    };
+
+    // Theme selection from user input
+    $("#animals").click(function () {
+        game.selectWord.animals();
+    });
+    $("#movies").click(function () {
+        game.selectWord.movies();
+    });
+
 });
