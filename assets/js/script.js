@@ -25,11 +25,12 @@ $(document).ready(function () {
     const all = animals.concat(movies, sports, cities, jobs)
 
     // Global variables
-    let wordToGuess;
-
+    let wordToGuess; // The randomly drawn word
+    let output = ""; // Keeps track of the letters chosen by the player, the results will be print in the homonymous ID in HTML
+    let lives; // Decreases by one when the player makes a mistake, triggers game over when it reaches 0
 
     const game = {
-        // Draws a random word from user selected theme and initiates the game
+        // Draws a random word from the user selected theme and initiates the game
         selectWord: {
             animals: function () {
                 wordToGuess = animals[Math.floor(Math.random() * animals.length)];
@@ -56,11 +57,26 @@ $(document).ready(function () {
                 game.initiate()
             },
         },
-
+        
         initiate: function () {
             $("#selectionModal").modal("hide");
-            console.log(wordToGuess);
-        }
+
+            for (char of wordToGuess) {
+                if (char == " ") {
+                    output += char;
+                } else {
+                    output += "_";
+                }
+            }
+
+            $("#output").html(output);
+        },
+
+        
+        reset: function () {
+            output = "";
+            lives = 6;
+        },
     };
 
     
@@ -73,5 +89,7 @@ $(document).ready(function () {
     $("#cities").click(function () { game.selectWord.cities(); });
     $("#jobs").click(function () { game.selectWord.jobs(); });
     $("#all").click(function () { game.selectWord.all(); });
+
+
 
 });
