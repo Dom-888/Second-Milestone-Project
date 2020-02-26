@@ -10,16 +10,39 @@ body {
     font-family: "roboto", sans-serif;
 }
 
+/* Cartoonish borders */
+.container,.modal-content,.btn-action,#figure  {
+    border: 3px solid #000;
+    border-radius: 10px;
+}
+
+/*---------------Gameplay---------------*/
+
 #gameplay {
+    text-align: center;
     margin-top: 10vh;
     height: 80vh;
     background-image: radial-gradient(#FDF6E3, #fde1ab);
 }
 
-/* Cartoonish borders */
-.container,.modal-content,.btn  {
-    border: 3px solid #000;
-    border-radius: 10px;
+#figure {
+    width: 40vh;
+    height: 40vh;
+    margin: auto;
+    background-image:url("../images/figure.gif");
+    /* background-repeat:no-repeat; */
+    background-size: cover;
+}
+
+#output {
+    font-family: "dosis", sans-serif;
+    font-size: 36px;
+    text-decoration: none;
+
+}
+
+#keyboard {
+
 }
 
 /*---------------Modals---------------*/
@@ -77,9 +100,13 @@ body {
     background-color: #81DAFC;
 }
 
-.btn-keyboard {
-    
+.btn-key {
+    /* width: 3px; */
+    padding: 0;
+    margin: 1px;
 }
+
+
 
 .btn-toggle-audio {
     
