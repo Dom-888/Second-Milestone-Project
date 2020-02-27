@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     // Global variables
     let wordToGuess; // The randomly drawn word
-    let output = ""; // Keeps track of the letters chosen by the player, the results will be print in the homonymous ID in HTML
+    let output = []; // Keeps track of the letters chosen by the player, the results will be print in the homonymous ID in HTML
     let lives; // Decreases by one when the player makes a mistake, triggers game over when it reaches 0
 
     const game = {
@@ -57,29 +57,44 @@ $(document).ready(function () {
                 game.initiate()
             },
         },
-        
+
         initiate: function () {
             $("#selectionModal").modal("hide");
 
             for (char of wordToGuess) {
                 if (char == " ") {
-                    output += char;
+                    output.push(char);
                 } else {
-                    output += "_";
+                    output.push("_");
                 }
             }
 
             $("#output").html(output);
         },
 
-        
+        guessLetter: function (letter) {
+        var error = true;
+        var i;
+        for (i = 0; i < wordToGuess.length; i++) {
+            if (wordToGuess[i] == letter) {
+                output[i] = letter;
+                $("#output").html(output);
+                error = false;
+            }
+        }
+        if (error) {
+            console.log("nope");} // In the final version this will trigger game.mistake
+
+        // Now change the style of the key button and makes it unclickable
+        },
+    
         reset: function () {
             output = "";
             lives = 6;
         },
     };
 
-    
+
     /*---------------User inputs---------------*/
 
     // Theme selection 
@@ -89,6 +104,10 @@ $(document).ready(function () {
     $("#cities").click(function () { game.selectWord.cities(); });
     $("#jobs").click(function () { game.selectWord.jobs(); });
     $("#all").click(function () { game.selectWord.all(); });
+
+    // Letter selection
+    $(".btn-key").click(function () { game.guessLetter(this.textContent)});
+
 
 
 
