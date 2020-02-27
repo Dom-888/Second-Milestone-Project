@@ -51,8 +51,10 @@ $(document).ready(function () {
             },
         },
 
+        // Ready a new game
         initiate: function () {
             $("#selectionModal").modal("hide");
+            $("#figure").attr("src", "assets/images/6_baloon(s).png");
 
             for (char of wordToGuess) {
                 if (char == " ") {
@@ -61,7 +63,6 @@ $(document).ready(function () {
                     output.push("_");
                 }
             }
-
             $("#output").html(output);
         },
 
@@ -78,29 +79,30 @@ $(document).ready(function () {
                     // Check winning condition
                     if (output.toString().replace(/,/g, "") == wordToGuess) {
                         $("#outcome").text("Well Done!");
-                        $("#replayModal").modal("show");                    
+                        game.over();
                     }
                 }
             }
 
             if (error) {
-                lives --;
+                lives--;
                 // Update the figure
-                $("#figure").attr("src",`assets/images/`+ lives +`_baloon(s).png`);
+                $("#figure").attr("src", `assets/images/` + lives + `_baloon(s).png`);
                 // Check losing condition
-                if (lives == 0)  {
+                if (lives == 0) {
                     $("#outcome").text("You Lost...");
-                    $("#replayModal").modal("show");
-                }                
-            } 
+                    game.over();
 
+                }
+            }
             // Change the style of the key button and makes it unclickable
         },
-
-
-
-        reset: function () {
-            output = "";
+        
+        // Show the Replay Modal and reset the variables to their original value
+        over: function () {
+            $("#solution").html(`<h4>The word to guess was <b>` + wordToGuess + `</b>`);
+            $("#replayModal").modal("show");
+            output = [];
             lives = 6;
         }
     };
