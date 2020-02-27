@@ -92,7 +92,8 @@ $(document).ready(function () {
 
             if (error) {
                 lives --;
-                // Change #figure
+                // Update the figure
+                $("#figure").attr("src",`assets/images/`+ lives +`_baloon(s).png`);
                 // Check losing condition
                 if (lives == 0)  {
                     console.log("defeat")

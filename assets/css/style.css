@@ -29,10 +29,7 @@ body {
 #figure {
     width: 30vh;
     height: 30vh;
-    margin: auto;
-    background-image: url("../images/6_baloon(s).png");
-    /* background-repeat:no-repeat; */
-    background-size: cover;
+    margin: auto;display: block;
 }
 
 #output {
