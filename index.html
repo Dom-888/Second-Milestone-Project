@@ -66,7 +66,7 @@
 	</div>
 
 	<!-- Introduction Modal  -->
-	<!-- The purpose of this modal dialog is to introduce the user to the game by showing the rules of the game -->
+	<!-- This modal introduces the user to the game by showing the rules-->
 	<div id="introductionModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Introduction Modal"
 		aria-hidden="true" data-backdrop="static" data-keyboard="false">
 		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -87,7 +87,7 @@
 	</div>
 
 	<!-- Selection Modal  -->
-	<!-- In this window the user selects the theme from which the word to guess will be drafted -->
+	<!-- Here the user chooses the theme from which the word to guess will be extracted -->
 	<div id="selectionModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Selection Modal"
 		aria-hidden="true" data-backdrop="static" data-keyboard="false">
 		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -118,6 +118,21 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Replay Modal  -->
+	<!-- This modal appears when the game is over, shows the user the score and gives the opportunity to play again. The text of this modal is determined in JS according to the result of the game -->
+	<div id="replayModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Replay Modal"
+		aria-hidden="true" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+			<div class="modal-content">
+				<h2 id="outcome">You shouldn't be able to see this</h2>
+				<h4 id="solution">Obviously you're not a golfer.</h4>
+				<button id="replayButton" class="btn btn-lg btn-action">Play Again <i class="fa fa-play-circle fa-lg" aria-hidden="true"></i></button>
+				<h4 id="result">Score: Over9k<br>Time: 000</h4>
+			</div>
+		</div>
+	</div>
+
 
 
 

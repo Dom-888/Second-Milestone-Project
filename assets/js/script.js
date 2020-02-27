@@ -3,8 +3,8 @@ $(document).ready(function () {
     // Opens the modal dialog as soon as the page is loaded
     $("#introductionModal").modal("show")
 
-    $("#playButton").click(function () {
-        $("#introductionModal").modal("hide");
+    $("#playButton,#replayButton").click(function () {
+        $("#introductionModal,#replayModal").modal("hide");
         $("#selectionModal").modal("show");
     });
 
@@ -67,6 +67,7 @@ $(document).ready(function () {
 
         // Check if the letter chosen by the user is part of the word to be guessed
         guessLetter: function (letter) {
+            console.log(wordToGuess) //For testing purpose only
             var error = true;
             var i;
             for (i = 0; i < wordToGuess.length; i++) {
@@ -76,9 +77,9 @@ $(document).ready(function () {
                     error = false;
                     // Check winning condition
                     if (output.toString().replace(/,/g, "") == wordToGuess) {
-                          console.log("victory")
+                        $("#outcome").text("Well Done!");
+                        $("#replayModal").modal("show");                    
                     }
-                     // $("#victoryModal").modal("show");
                 }
             }
 
@@ -88,8 +89,8 @@ $(document).ready(function () {
                 $("#figure").attr("src",`assets/images/`+ lives +`_baloon(s).png`);
                 // Check losing condition
                 if (lives == 0)  {
-                    console.log("defeat")
-                    // $("#defeatModal").modal("show");
+                    $("#outcome").text("You Lost...");
+                    $("#replayModal").modal("show");
                 }                
             } 
 
