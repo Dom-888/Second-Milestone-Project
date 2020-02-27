@@ -95,7 +95,6 @@ $(document).ready(function () {
 
                 }
             }
-            // Change the style of the key button and makes it unclickable
         },
         
         // Show the Replay Modal and reset the variables to their original value
@@ -119,7 +118,10 @@ $(document).ready(function () {
     $("#all").click(function () { game.selectWord.all(); });
 
     // Letter selection
-    $(".btn-key").click(function () { game.guessLetter(this.textContent) });
+    $(".btn-key").click(function () { 
+        game.guessLetter(this.textContent);
+        $(this).attr("disabled", true) 
+    });
 
 
 
