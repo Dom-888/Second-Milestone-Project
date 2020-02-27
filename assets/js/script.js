@@ -27,7 +27,8 @@ $(document).ready(function () {
     // Global variables
     let wordToGuess; // The randomly drawn word
     let output = []; // Keeps track of the letters chosen by the player, the results will be print in the homonymous ID in HTML
-    let lives; // Decreases by one when the player makes a mistake, triggers game over when it reaches 0
+    let lives = 6; // Decreases by one when the player makes a mistake
+
 
     const game = {
         // Draws a random word from the user selected theme and initiates the game
@@ -72,26 +73,42 @@ $(document).ready(function () {
             $("#output").html(output);
         },
 
+        // Check if the letter chosen by the user is part of the word to be guessed
         guessLetter: function (letter) {
-        var error = true;
-        var i;
-        for (i = 0; i < wordToGuess.length; i++) {
-            if (wordToGuess[i] == letter) {
-                output[i] = letter;
-                $("#output").html(output);
-                error = false;
+            var error = true;
+            var i;
+            for (i = 0; i < wordToGuess.length; i++) {
+                if (wordToGuess[i] == letter) {
+                    output[i] = letter;
+                    $("#output").html(output);
+                    error = false;
+                    // Check winning condition
+                    if (output.toString().replace(/,/g, "") == wordToGuess) {
+                          console.log("victory")
+                    }
+                     // $("#victoryModal").modal("show");
+                }
             }
-        }
-        if (error) {
-            console.log("nope");} // In the final version this will trigger game.mistake
 
-        // Now change the style of the key button and makes it unclickable
+            if (error) {
+                lives --;
+                // Change #figure
+                // Check losing condition
+                if (lives == 0)  {
+                    console.log("defeat")
+                    // $("#defeatModal").modal("show");
+                }                
+            } 
+
+            // Change the style of the key button and makes it unclickable
         },
-    
+
+
+
         reset: function () {
             output = "";
             lives = 6;
-        },
+        }
     };
 
 
@@ -106,7 +123,7 @@ $(document).ready(function () {
     $("#all").click(function () { game.selectWord.all(); });
 
     // Letter selection
-    $(".btn-key").click(function () { game.guessLetter(this.textContent)});
+    $(".btn-key").click(function () { game.guessLetter(this.textContent) });
 
 
 
