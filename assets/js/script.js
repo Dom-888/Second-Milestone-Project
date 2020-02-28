@@ -54,7 +54,7 @@ $(document).ready(function () {
         // Ready a new game
         initiate: function () {
             $("#selectionModal").modal("hide");
-            $("#figure").attr("src", "assets/images/6_baloon(s).png");
+            $("#figure").attr("src", "assets/images/6_baloon(s).jpg");
 
             for (char of wordToGuess) {
                 if (char == " ") {
@@ -87,7 +87,7 @@ $(document).ready(function () {
             if (error) {
                 lives--;
                 // Update the figure
-                $("#figure").attr("src", `assets/images/` + lives + `_baloon(s).png`);
+                $("#figure").attr("src", `assets/images/` + lives + `_baloon(s).jpg`);
                 // Check losing condition
                 if (lives == 0) {
                     $("#outcome").text("You Lost...");
