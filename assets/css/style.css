@@ -2,6 +2,9 @@
 /* Fonts imported from Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Patrick+Hand|Roboto:400,500&display=swap');
 
+html, body {
+    height: 100%;
+}
 
 body {
     /* The background image was designed by Hello-Pixel and was downloaded from http://www.freepik.com */
@@ -11,18 +14,22 @@ body {
     padding: 0 5vw;
 }
 
+
 /* Cartoonish borders */
-.container,.modal-content,.btn-action,#figure  {
+.container, .modal-content, .btn-action, #figure  {
     border: 3px solid #000;
     border-radius: 10px;
+}
+
+.main-wrapper {
+    height: 100%;
+    width: 100%;
 }
 
 /*---------------Gameplay---------------*/
 
 #gameplay {
     text-align: center;
-    margin-top: 10vh;
-    height: 80vh;
     background-image: radial-gradient(#FDF6E3, #fde1ab);
 }
 
