@@ -9,7 +9,8 @@ html, body {
 body {
     /* The background image was designed by Hello-Pixel and was downloaded from http://www.freepik.com */
     /* A fallback color has been set, in case the browser fails to load the image */
-    background: url(../images/background.jpg) #81DAFC; 
+    background: url(../images/background-sm.jpg) #81DAFC; 
+
     font-family: "roboto", sans-serif;
     padding: 0 5vw;
 }
@@ -36,7 +37,8 @@ body {
 #figure {
     width: 30vh;
     height: 30vh;
-    margin: auto;display: block;
+    margin: auto;
+    display: block;
 }
 
 #output {
@@ -56,6 +58,7 @@ body {
     color: #000;
     padding: 0 7.5%;
     text-align: center;
+    overflow-y: auto;
 }
 
 .modal-content {
@@ -123,4 +126,12 @@ body {
 
 .btn-toggle-help {
     
+}
+
+/*---------------Large Viewports---------------*/
+
+@media only screen and (min-width: 401px) {
+  body {
+    background: url(../images/background-lg.jpg) #81DAFC; 
+  }
 }
