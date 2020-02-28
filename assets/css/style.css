@@ -44,7 +44,7 @@ body {
 
 #output {
     font-family: "PatricK hand", sans-serif;
-    font-size: 36px;
+    font-size: 2.5em;
     letter-spacing: 2px;
     margin: 5% auto;
 }
@@ -62,7 +62,7 @@ body {
 }
 
 .modal-content {
-    padding: 20px;
+    padding: 5%;
 }
 
 .modal-dialog {
@@ -89,7 +89,7 @@ body {
     padding-top: 0 auto;
 }
 
-#score,#time {
+#score, #time {
     display: inline;
 }
 
@@ -106,11 +106,7 @@ body {
 
 .btn:active {
 	position: relative;
-	top: 2px;
-}
-
-
-#playButton {
+	transform: translateY(3px);
 }
 
 /* Call-To-Action buttons used in introduction and selection modals */
@@ -119,7 +115,19 @@ body {
     font-size: 2em;
     margin: 15px auto;
     font-weight: 500;
-    background-color: #81DAFC;
+    background-color: #81DAFC;   
+    outline: none;
+    box-shadow: 0 3px #000;
+}
+
+.btn-action:hover {
+    color: #fff;
+    background: #D35400;
+    transition: all 0.4s ease 0s;
+}
+
+.btn-action:active {
+    box-shadow: none;
 }
 
 .btn-key {
