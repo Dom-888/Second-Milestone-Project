@@ -96,11 +96,12 @@ $(document).ready(function () {
                 }
             }
         },
-        
+
         // Show the Replay Modal and reset the variables to their original value
         over: function () {
             $("#solution").html(`<h4>The word to guess was <b>` + wordToGuess + `</b>`);
             $("#replayModal").modal("show");
+            $(".btn-key").attr("disabled", false)
             output = [];
             lives = 6;
         }
@@ -118,9 +119,9 @@ $(document).ready(function () {
     $("#all").click(function () { game.selectWord.all(); });
 
     // Letter selection
-    $(".btn-key").click(function () { 
+    $(".btn-key").click(function () {
+        $(this).attr("disabled", true)
         game.guessLetter(this.textContent);
-        $(this).attr("disabled", true) 
     });
 
 

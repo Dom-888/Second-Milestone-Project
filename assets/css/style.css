@@ -32,6 +32,7 @@ body {
 #gameplay {
     text-align: center;
     background-image: radial-gradient(#FDF6E3, #fde1ab);
+    padding: 3em 0;
 }
 
 #figure {
@@ -49,7 +50,6 @@ body {
 }
 
 #keyboard {
-
 }
 
 /*---------------Modals---------------*/
@@ -100,6 +100,16 @@ body {
 
 /*---------------Buttons---------------*/
 
+.btn {
+    cursor: pointer;
+}
+
+.btn:active {
+	position: relative;
+	top: 2px;
+}
+
+
 #playButton {
 }
 
@@ -113,12 +123,31 @@ body {
 }
 
 .btn-key {
-    /* width: 3px; */
-    padding: 0;
-    margin: 1px;
+    width: 8%;
+  	font-size: 1em;
+    padding: 1px;
+    margin: 1px 0;
+	box-shadow: inset 0px 1px 3px 0px #91b8b3;
+	background: linear-gradient(to bottom, #768d87 5%, #646464 100%);
+	background-color: #646464;
+	border-radius: 5px;
+	border: 1px solid #566963;
+	display: inline-block;
+	color: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow:0px -1px 0px #2b665e;
 }
 
+.btn-key:hover:enabled {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #646464 100%);
+ 	background-color: #6c7c7c;
+}
 
+.btn-key:hover {
+    color:#ffffff;
+}
 
 .btn-toggle-audio {
     
@@ -131,7 +160,15 @@ body {
 /*---------------Large Viewports---------------*/
 
 @media only screen and (min-width: 401px) {
+
   body {
     background: url(../images/background-lg.jpg) #81DAFC; 
+  }
+
+  .btn-key {
+    width: 2em;
+    height: 2em;
+    font-size: 1.5em;
+    margin: 4px;
   }
 }
