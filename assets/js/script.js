@@ -22,6 +22,7 @@ $(document).ready(function () {
     let lives = 6; // Decreases by one when the player makes a mistake
     let startTime; // Records the game start time
     let finishTime; // Records the game end time
+    let score = 0; // Updates based on user guesses
 
 
     const game = {
@@ -80,6 +81,8 @@ $(document).ready(function () {
                     output[i] = letter;
                     $("#output").html(output);
                     error = false;
+                    // Update score
+                    score += 100;
                     // Check winning condition
                     if (output.toString().replace(/,/g, "") == wordToGuess) {
                         $("#outcome").text("Well Done!");
@@ -92,11 +95,13 @@ $(document).ready(function () {
                 lives--;
                 // Update the figure
                 $("#figure").attr("src", `assets/images/` + lives + `_baloon(s).jpg`);
+                // Update score
+                score -= 50;
+                if (score < 0) { score = 0 };
                 // Check losing condition
                 if (lives == 0) {
                     $("#outcome").text("You Lost...");
                     game.over();
-
                 }
             }
         },
@@ -107,7 +112,8 @@ $(document).ready(function () {
             $("#solution").html(`<h4>The word to guess was <b>` + wordToGuess + `</b>`);
             var d = new Date();
             finishTime = d.getTime()
-            var seconds = Math.round((finishTime - startTime)/1000);
+            var seconds = Math.round((finishTime - startTime) / 1000);
+            $("#score").text(`Score: `+ (score - seconds));
             $("#time").text(`Time: ` + seconds + `s`);
             // Show the modal
             $("#replayModal").modal("show");
