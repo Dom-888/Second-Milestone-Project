@@ -20,6 +20,8 @@ $(document).ready(function () {
     let wordToGuess; // The randomly drawn word
     let output = []; // Keeps track of the letters chosen by the player, the results will be print in the homonymous ID in HTML
     let lives = 6; // Decreases by one when the player makes a mistake
+    let startTime; // Records the game start time
+    let finishTime; // Records the game end time
 
 
     const game = {
@@ -51,10 +53,12 @@ $(document).ready(function () {
             },
         },
 
-        // Ready a new game
+        // Ready the game
         initiate: function () {
             $("#selectionModal").modal("hide");
             $("#figure").attr("src", "assets/images/6_baloon(s).jpg");
+            var d = new Date();
+            startTime = d.getTime()
 
             for (char of wordToGuess) {
                 if (char == " ") {
@@ -97,11 +101,18 @@ $(document).ready(function () {
             }
         },
 
-        // Show the Replay Modal and reset the variables to their original value
+        // Display the Replay Modal and prepare a new game
         over: function () {
+            // Prepare the modal 
             $("#solution").html(`<h4>The word to guess was <b>` + wordToGuess + `</b>`);
+            var d = new Date();
+            finishTime = d.getTime()
+            var seconds = Math.round((finishTime - startTime)/1000);
+            $("#time").text(`Time: ` + seconds + `s`);
+            // Show the modal
             $("#replayModal").modal("show");
-            $(".btn-key").attr("disabled", false)
+            // Reset key buttons and global variables
+            $(".btn-key").attr("disabled", false);
             output = [];
             lives = 6;
         }
