@@ -113,7 +113,9 @@ $(document).ready(function () {
             var d = new Date();
             finishTime = d.getTime()
             var seconds = Math.round((finishTime - startTime) / 1000);
-            $("#score").text(`Score: `+ (score - seconds));
+            var finalScore = score - seconds;
+            if (finalScore < 0) { finalScore = 0 };
+            $("#score").text(`Score: `+ finalScore);
             $("#time").text(`Time: ` + seconds + `s`);
             // Show the modal
             $("#replayModal").modal("show");
@@ -140,8 +142,5 @@ $(document).ready(function () {
         $(this).attr("disabled", true)
         game.guessLetter(this.textContent);
     });
-
-
-
 
 });
