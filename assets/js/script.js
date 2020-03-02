@@ -1,8 +1,16 @@
 $(document).ready(function () {
 
-    // Opens the modal dialog as soon as the page is loaded
-    $("#introductionModal").modal("show")
+    // Load and display top scores from local storage
+    if (typeof (Storage) !== "undefined") {
+        $("#1st").text(localStorage.first);
+        $("#2nd").text(localStorage.second);
+        $("#3rd").text(localStorage.third);
+    } else {
+        $("#topScores").html("<h4>Unable to save scores with current browser</h4>")
+    }
 
+    // Opens Introduction Modal as soon as the user lands on the page
+    $("#introductionModal").modal("show");
     $("#playButton,#replayButton").click(function () {
         $("#introductionModal,#replayModal").modal("hide");
         $("#selectionModal").modal("show");
@@ -106,6 +114,24 @@ $(document).ready(function () {
             }
         },
 
+        // Add new records to the leaderboard, move old top-scores to proper position
+        updateTopScores: function (newRecord) {
+            if (localStorage.first == "undefined") { localStorage.first = newRecord }
+            else if (localStorage.second == "undefined") { localStorage.second = newRecord }
+            else if (newRecord > localStorage.first) {
+                localStorage.first = newRecord
+                localStorage.third = localStorage.second;
+                localStorage.second = localStorage.first;
+            }
+            else if (newRecord > localStorage.second) {
+                localStorage.third = localStorage.second;
+                localStorage.second = newRecord;
+            }
+            else {
+                localStorage.third = newRecord;
+            }
+        },
+
         // Display the Replay Modal and prepare a new game
         over: function () {
             // Prepare the modal 
@@ -115,8 +141,10 @@ $(document).ready(function () {
             var seconds = Math.round((finishTime - startTime) / 1000);
             var finalScore = score - seconds;
             if (finalScore < 0) { finalScore = 0 };
-            $("#score").text(`Score: `+ finalScore);
+            $("#score").text(`Score: ` + finalScore);
             $("#time").text(`Time: ` + seconds + `s`);
+            // Check if the score set a record
+            if (finalScore > localStorage.third || localStorage.third == "undefined") { game.updateTopScores(finalScore); }
             // Show the modal
             $("#replayModal").modal("show");
             // Reset key buttons and global variables
