@@ -119,9 +119,9 @@ $(document).ready(function () {
             if (localStorage.first == undefined) { localStorage.first = newRecord }
             else if (localStorage.second == undefined) { localStorage.second = newRecord }
             else if (newRecord > localStorage.first) {
-                localStorage.first = newRecord
                 localStorage.third = localStorage.second;
                 localStorage.second = localStorage.first;
+                localStorage.first = newRecord
             }
             else if (newRecord > localStorage.second) {
                 localStorage.third = localStorage.second;
@@ -151,6 +151,7 @@ $(document).ready(function () {
             $(".btn-key").attr("disabled", false);
             output = [];
             lives = 6;
+            score = 0;
         }
     };
 
