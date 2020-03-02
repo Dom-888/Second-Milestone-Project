@@ -17,7 +17,7 @@ body {
 
 
 /* Cartoonish borders */
-.container, .modal-content, .btn-action, #figure {
+#gameplay, .modal-content, .btn-action, #figure {
     border: 3px solid #000;
     border-radius: 10px;
 }
@@ -82,7 +82,7 @@ body {
 }
 
 #selectionModal {
-
+    text-align: center;
 }
 
 #selectionModal .container{
@@ -96,6 +96,13 @@ body {
     margin-top: 0 auto;
     padding-top: 0 auto;
 }
+
+#topScores {
+    max-width: 150px;
+    font-size:  1.2em;
+}
+
+
 
 #score, #time {
     display: inline;

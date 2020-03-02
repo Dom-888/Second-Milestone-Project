@@ -73,17 +73,25 @@
 			<div class="modal-content">
 				<h2>The Hangman Game</h2>
 				<button id="playButton" class="btn btn-lg btn-action"><i class="fa fa-play-circle fa-lg" aria-hidden="true"></i><span>Play</span></button>
-				<p>The hangman is a classic game in which you will have to guess a word by choosing a letter at a time.
-					If
-					you
-					choose a letter that occurs in the word, this will appear in all its correct positions, however, for
-					each
-					mistake you make a part of the Hangman will be drawn. You win if you guess the word before the
-					Hangman
-					is
-					complete.</p>
+				<h4>Top Scores</h4>
+				<div id="topScores" class = "container">
+                    <div class="row">
+                        <div class="col-4 font-weight-bold">1st</div>
+                        <div id="1st" class="col-8">---</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 font-weight-bold">2nd</div>
+                        <div id="2nd" class="col-8">---</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 font-weight-bold">3rd</div>
+                        <div id="3rd" class="col-8">---</div>
+                    </div>
+
+				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 
 	<!-- Selection Modal  -->
@@ -127,10 +135,10 @@
 			<div class="modal-content">
 				<h2 id="outcome">You shouldn't be able to see this</h2>
 				<h4 id="solution">Obviously you're not a golfer.</h4>
-                <h4>Another game?</h4>
+				<h4>Another game?</h4>
 				<button id="replayButton" class="btn btn-lg btn-action"><i class="fa fa-play-circle fa-lg" aria-hidden="true"></i><span>Play</span></button>
 				<h4 id="score">Score: Over9k</h4>
-                <h4 id="time">Time: 000</h4>
+				<h4 id="time">Time: 000</h4>
 			</div>
 		</div>
 	</div>
