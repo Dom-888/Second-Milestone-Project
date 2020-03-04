@@ -10,7 +10,6 @@ body {
     /* The background image was designed by Hello-Pixel and was downloaded from http://www.freepik.com */
     /* A fallback color has been set, in case the browser fails to load the image */
     background: url(../images/background-sm.jpg) #81DAFC; 
-
     font-family: "roboto", sans-serif;
     padding: 0 5vw;
 }
@@ -27,20 +26,19 @@ body {
 #gameplay {
     text-align: center;
     background-image: radial-gradient(#FDF6E3, #fde1ab);
-    padding: 3em 0;
+    padding: 0;
 }
 
- .modal span {
-    width: 125px;
-    display: inline-block;
-    text-align: center;
-    margin: 0;
+.navbar-mini {
+    display: Flex;
+    justify-content: space-between;
+    margin: 0 auto -3em;
 }
 
 #figure {
     width: 30vh;
     height: 30vh;
-    margin: auto;
+    margin: 3em auto 0;
     display: block;
 }
 
@@ -52,6 +50,7 @@ body {
 }
 
 #keyboard {
+    margin-bottom: 3em;
 }
 
 /*---------------Modals---------------*/
@@ -97,16 +96,9 @@ body {
     font-size:  1.2em;
 }
 
-
-
 #score, #time {
     display: inline;
 }
-
-.modal-help {
-
-}
-
 
 /*---------------Buttons---------------*/
 
@@ -120,13 +112,23 @@ body {
     outline: none;
 }
 
+.btn > span {
+    width: 125px;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+}
+
+.btn-action, .btn-home, .btn-audio-toggle {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
 /* Call-To-Action buttons used in introduction and selection modals */
 .btn-action {
     width: 205px;
-    font-size: 2em;
     padding: 8px 12px;
     margin: 15px auto;
-    font-weight: 500;
     background-color: #81DAFC;   
     box-shadow: 0 3px #000;
 }
@@ -141,6 +143,17 @@ body {
     box-shadow: none;
 }
 
+
+/* The buttons at the top corners of the gameplay page */
+.btn-home, .btn-audio-toggle {
+}
+
+.btn-home:hover, .btn-audio-toggle:hover {
+    transition: all 0.4s ease 0s; 
+    text-shadow: 0 0 3px #D35400;
+}
+
+/* The buttons that make up the on-screen keyboard */
 .btn-key {
     width: 8%;
   	font-size: 1em;
@@ -166,14 +179,6 @@ body {
 
 .btn-key:hover {
     color:#ffffff;
-}
-
-.btn-toggle-audio {
-    
-}
-
-.btn-toggle-help {
-    
 }
 
 /*---------------Large Viewports---------------*/
