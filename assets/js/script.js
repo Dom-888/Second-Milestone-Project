@@ -172,4 +172,11 @@ $(document).ready(function () {
         game.guessLetter(this.textContent);
     });
 
+    // Home button
+    $("#home").click(function () { location.reload(); })
+
+    // Audio-toggle button
+    // $("#audioToggle").click(function () {
+    // })
+
 });

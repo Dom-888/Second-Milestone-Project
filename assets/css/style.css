@@ -109,19 +109,6 @@ body {
 .btn:active {
 	position: relative;
 	transform: translateY(3px);
-    outline: none;
-}
-
-.btn > span {
-    width: 125px;
-    display: inline-block;
-    text-align: center;
-    margin: 0;
-}
-
-.btn-action, .btn-home, .btn-audio-toggle {
-    font-size: 1.5em;
-    font-weight: 500;
 }
 
 /* Call-To-Action buttons used in introduction and selection modals */
@@ -129,8 +116,17 @@ body {
     width: 205px;
     padding: 8px 12px;
     margin: 15px auto;
+    font-size: 1.5em;
     background-color: #81DAFC;   
     box-shadow: 0 3px #000;
+}
+
+.btn-action > span {
+    width: 125px;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
 }
 
 .btn-action:hover {
@@ -143,12 +139,12 @@ body {
     box-shadow: none;
 }
 
-
-/* The buttons at the top corners of the gameplay page */
-.btn-home, .btn-audio-toggle {
+/* The buttons at the top corners of the gameplay page (Home and Audio-toggle)  */
+.btn-corner{
+    font-size: 1.5em;
 }
 
-.btn-home:hover, .btn-audio-toggle:hover {
+.btn-corner:hover {
     transition: all 0.4s ease 0s; 
     text-shadow: 0 0 3px #D35400;
 }
@@ -164,11 +160,9 @@ body {
 	background-color: #646464;
 	border-radius: 5px;
 	border: 1px solid #566963;
-	display: inline-block;
 	color: #ffffff;
 	font-family: Arial;
 	font-weight: bold;
-	text-decoration: none;
 	text-shadow:0px -1px 0px #2b665e;
 }
 
