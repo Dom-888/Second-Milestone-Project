@@ -26,19 +26,19 @@ body {
 #gameplay {
     text-align: center;
     background-image: radial-gradient(#FDF6E3, #fde1ab);
-    padding: 0;
+    padding: 3em 1em;
 }
 
 .navbar-mini {
-    display: Flex;
+    display: flex;
     justify-content: space-between;
-    margin: 0 auto -3em;
+    margin: -2em 0 -1em;
 }
 
 #figure {
     width: 30vh;
     height: 30vh;
-    margin: 3em auto 0;
+    margin: 0 auto;
     display: block;
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 #keyboard {
-    margin-bottom: 3em;
+    /* margin-bottom: 3em; */
 }
 
 /*---------------Modals---------------*/
