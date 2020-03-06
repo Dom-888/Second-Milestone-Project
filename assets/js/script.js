@@ -65,7 +65,7 @@ $(document).ready(function () {
         // Ready the game
         initiate: function () {
             $("#selectionModal").modal("hide");
-            $("#figure").attr("src", "assets/images/6_baloon(s).jpg");
+            $("#figure").attr("src", "assets/images/6_baloon(s).png");
             var d = new Date();
             startTime = d.getTime()
 
@@ -102,7 +102,7 @@ $(document).ready(function () {
             if (error) {
                 lives--;
                 // Update the figure
-                $("#figure").attr("src", `assets/images/` + lives + `_baloon(s).jpg`);
+                $("#figure").attr("src", `assets/images/` + lives + `_baloon(s).png`);
                 // Update score
                 score -= 50;
                 if (score < 0) { score = 0 };

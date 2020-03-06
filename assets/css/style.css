@@ -40,6 +40,7 @@ body {
     height: 30vh;
     margin: 0 auto;
     display: block;
+    background: url(../images/background-sm.jpg) #81DAFC; 
 }
 
 #output {
