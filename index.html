@@ -1,162 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>
 
-	<!-- Bootstrap CSS and Font Awesome CDN -->
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	<title>The Hangman game</title>
+        <!-- Bootstrap-CSS and Font Awesome CDN -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+            
+        <title>The Hangman game</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
 
-	<link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
 
-</head>
-
-<body>
-	<div class="row h-100">
-		<div class="col-sm-12 my-auto">
-			<div id="gameplay" class="container">
-                <div class="navbar-mini">
-                    <button id="home" class="btn btn-corner"><i class="fa fa-home fa-lg" aria-hidden="true"></i></button>
-                    <button id="audioToggle" class="btn btn-corner"><i class="fa fa-volume-up fa-lg" aria-hidden="true"></i></button>
+        <!-- Gameplay page -->
+        <div class="row h-100">
+            <div class="col-sm-12 my-auto">
+                <div id="gameplay" class="container">
+                    <div class="navbar-mini">
+                        <button id="home" class="btn btn-corner"><i class="fa fa-home fa-lg" aria-hidden="true"></i></button>
+                        <button id="audioToggle" class="btn btn-corner"><i class="fa fa-volume-up fa-lg" aria-hidden="true"></i></button>
+                    </div>
+                    <a href="#">test only</a>
+                    <img id="figure" src="assets/images/0_baloon(s).png"></img>
+                    <div id="output">_</div>
+                    <div id="keyboard">
+                        <div class="first-row">
+                            <button class="btn btn-key">Q</button>
+                            <button class="btn btn-key">W</button>
+                            <button class="btn btn-key">E</button>
+                            <button class="btn btn-key">R</button>
+                            <button class="btn btn-key">T</button>
+                            <button class="btn btn-key">Y</button>
+                            <button class="btn btn-key">U</button>
+                            <button class="btn btn-key">I</button>
+                            <button class="btn btn-key">O</button>
+                            <button class="btn btn-key">P</button>
+                        </div>
+                        <div class="second-row">
+                            <button class="btn btn-key">A</button>
+                            <button class="btn btn-key">S</button>
+                            <button class="btn btn-key">D</button>
+                            <button class="btn btn-key">F</button>
+                            <button class="btn btn-key">G</button>
+                            <button class="btn btn-key">H</button>
+                            <button class="btn btn-key">J</button>
+                            <button class="btn btn-key">K</button>
+                            <button class="btn btn-key">L</button>
+                        </div>
+                        <div class="third-row">
+                            <button class="btn btn-key">Z</button>
+                            <button class="btn btn-key">X</button>
+                            <button class="btn btn-key">C</button>
+                            <button class="btn btn-key">V</button>
+                            <button class="btn btn-key">B</button>
+                            <button class="btn btn-key">N</button>
+                            <button class="btn btn-key">M</button>
+                        </div>
+                    </div>
                 </div>
-				<a href="#">test only</a>
-				<img id="figure" src="assets/images/0_baloon(s).png"></img>
-				<div id="output">_</div>
-				<div id="keyboard">
-					<div class="first-row">
-						<button class="btn btn-key">Q</button>
-						<button class="btn btn-key">W</button>
-						<button class="btn btn-key">E</button>
-						<button class="btn btn-key">R</button>
-						<button class="btn btn-key">T</button>
-						<button class="btn btn-key">Y</button>
-						<button class="btn btn-key">U</button>
-						<button class="btn btn-key">I</button>
-						<button class="btn btn-key">O</button>
-						<button class="btn btn-key">P</button>
-					</div>
-					<div class="second-row">
-						<button class="btn btn-key">A</button>
-						<button class="btn btn-key">S</button>
-						<button class="btn btn-key">D</button>
-						<button class="btn btn-key">F</button>
-						<button class="btn btn-key">G</button>
-						<button class="btn btn-key">H</button>
-						<button class="btn btn-key">J</button>
-						<button class="btn btn-key">K</button>
-						<button class="btn btn-key">L</button>
-					</div>
-					<div class="third-row">
-						<button class="btn btn-key">Z</button>
-						<button class="btn btn-key">X</button>
-						<button class="btn btn-key">C</button>
-						<button class="btn btn-key">V</button>
-						<button class="btn btn-key">B</button>
-						<button class="btn btn-key">N</button>
-						<button class="btn btn-key">M</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
 
-	<!-- Introduction Modal  -->
-	<!-- This modal introduces the user to the game by showing the rules-->
-	<div id="introductionModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Introduction Modal"
-		aria-hidden="true" data-backdrop="static" data-keyboard="false">
-		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-			<div class="modal-content">
-				<h2>Hangman</h2>
-                <h5>Try to guess the secret word by tapping on the letters. Good luck!</h5>
-				<button id="playButton" class="btn btn-lg btn-action"><i class="fa fa-play-circle fa-lg" aria-hidden="true"></i><span>Play</span></button>
-				<h4>Top Scores</h4>
-				<div id="topScores" class="container">
-					<div class="row">
-						<div class="col-4 font-weight-bold">1st</div>
-						<div id="1st" class="col-8">---</div>
-					</div>
-					<div class="row">
-						<div class="col-4 font-weight-bold">2nd</div>
-						<div id="2nd" class="col-8">---</div>
-					</div>
-					<div class="row">
-						<div class="col-4 font-weight-bold">3rd</div>
-						<div id="3rd" class="col-8">---</div>
-					</div>
+        <!-- Introduction Modal  -->
+        <div id="introductionModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Introduction Modal"
+            aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <h2>Hangman</h2>
+                    <h5>Try to guess the secret word by tapping on the letters. Good luck!</h5>
+                    <button id="playButton" class="btn btn-lg btn-action"><i class="fa fa-play-circle fa-lg" aria-hidden="true"></i><span>Play</span></button>
+                    <h4>Top Scores</h4>
+                    <div id="topScores" class="container">
+                        <div class="row">
+                            <div class="col-4 font-weight-bold">1st</div>
+                            <div id="1st" class="col-8">---</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 font-weight-bold">2nd</div>
+                            <div id="2nd" class="col-8">---</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 font-weight-bold">3rd</div>
+                            <div id="3rd" class="col-8">---</div>
+                        </div>
 
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
 
-	<!-- Selection Modal  -->
-	<!-- Here the user chooses the theme from which the word to guess will be extracted -->
-	<div id="selectionModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Selection Modal"
-		aria-hidden="true" data-backdrop="static" data-keyboard="false">
-		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-			<div class="modal-content">
-				<h2 class="text-center">Select a Theme</h2>
-				<div class="container">
-					<div class="row">
-						<div class="col-12 col-lg-6">
-							<button id="all" class="btn btn-lg btn-action"><i class="fa fa-star fa-lg" aria-hidden="true"></i><span>All</span></button>
-						</div>
-						<div class="col-12 col-lg-6">
-							<button id="animals" class="btn btn-lg btn-action"><i class="fa fa-paw fa-lg" aria-hidden="true"></i><span>Animals</span></button>
-						</div>
-						<div class="col-12 col-lg-6">
-							<button id="cities" class="btn btn-lg btn-action"><i class="fa fa-institution fa-lg" aria-hidden="true"></i><span>Cities</span></button>
-						</div>
-						<div class="col-12 col-lg-6">
-							<button id="movies" class="btn btn-lg btn-action"><i class="fa fa-film fa-lg" aria-hidden="true"></i><span>Movies</span></button>
-						</div>
-						<div class="col-12 col-lg-6">
-							<button id="sports" class="btn btn-lg btn-action"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i><span>Sports</span></button>
-						</div>
-						<div class="col-12 col-lg-6">
-							<button id="jobs" class="btn btn-lg btn-action"><i class="fa fa-suitcase fa-lg" aria-hidden="true"></i><span>Jobs</span></button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <!-- Selection Modal  -->
+        <div id="selectionModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Selection Modal"
+            aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <h2 class="text-center">Select a Theme</h2>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <button id="all" class="btn btn-lg btn-action"><i class="fa fa-star fa-lg" aria-hidden="true"></i><span>All</span></button>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <button id="animals" class="btn btn-lg btn-action"><i class="fa fa-paw fa-lg" aria-hidden="true"></i><span>Animals</span></button>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <button id="cities" class="btn btn-lg btn-action"><i class="fa fa-institution fa-lg" aria-hidden="true"></i><span>Cities</span></button>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <button id="movies" class="btn btn-lg btn-action"><i class="fa fa-film fa-lg" aria-hidden="true"></i><span>Movies</span></button>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <button id="sports" class="btn btn-lg btn-action"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i><span>Sports</span></button>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <button id="jobs" class="btn btn-lg btn-action"><i class="fa fa-suitcase fa-lg" aria-hidden="true"></i><span>Jobs</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-	<!-- Replay Modal  -->
-	<!-- This modal appears when the game is over, shows the user the score and gives the opportunity to play again. The text of this modal is determined in JS according to the result of the game -->
-	<div id="replayModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Replay Modal"
-		aria-hidden="true" data-backdrop="static" data-keyboard="false">
-		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-			<div class="modal-content">
-				<h2 id="outcome">You shouldn't be able to see this</h2>
-				<h4 id="solution">Obviously you're not a golfer.</h4>
-				<h4>Another game?</h4>
-				<button id="replayButton" class="btn btn-lg btn-action"><i class="fa fa-play-circle fa-lg" aria-hidden="true"></i><span>Play</span></button>
-				<h4 id="score">Score: Over9k</h4>
-				<h4 id="time">Time: 000</h4>
-			</div>
-		</div>
-	</div>
+        <!-- Replay Modal  -->
+        <div id="replayModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Replay Modal"
+            aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <h2 id="outcome">You shouldn't be able to see this</h2>
+                    <h4 id="solution">Obviously you're not a golfer.</h4>
+                    <h4>Another game?</h4>
+                    <button id="replayButton" class="btn btn-lg btn-action"><i class="fa fa-play-circle fa-lg" aria-hidden="true"></i><span>Play</span></button>
+                    <h4 id="score">Score: Over9k</h4>
+                    <h4 id="time">Time: 000</h4>
+                </div>
+            </div>
+        </div>
 
+        <!-- jQuery and Bootstrap-JS CDN -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+        <script src="assets/js/script.js"></script>
 
-
-
-	<!-- jQuery and Bootstrap JavaScript CDN -->
-	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-	</script>
-
-	<script src="assets/js/script.js"></script>
-
-</body>
+    </body>
 
 </html>
