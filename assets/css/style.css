@@ -14,7 +14,6 @@ body {
     padding: 0 5vw;
 }
 
-
 /* Cartoonish borders */
 #gameplay, .modal-content, .btn-action, #figure {
     border: 3px solid #000;
@@ -41,6 +40,7 @@ body {
     margin: 0 auto;
     display: block;
     background: url(../images/background-sm.jpg) #81DAFC; 
+    background-position: center top;
 }
 
 #output {
@@ -48,10 +48,6 @@ body {
     font-size: 2.5em;
     letter-spacing: 2px;
     margin: 5% auto;
-}
-
-#keyboard {
-    /* margin-bottom: 3em; */
 }
 
 /*---------------Modals---------------*/
@@ -66,14 +62,6 @@ body {
 .modal-content {
     padding: 5%;
     margin: 0 7.5%;
-}
-
-.modal-dialog {
-    /* background-color: blue; */
-}
-
-#introductionModal {
-
 }
 
 #selectionModal {
