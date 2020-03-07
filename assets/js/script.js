@@ -1,15 +1,15 @@
 $(document).ready(function () {
 
-    // Load and display top scores from local storage
+    // Load top scores from local storage
     if (typeof (Storage) !== "undefined") {
         $("#1st").text(localStorage.first);
         $("#2nd").text(localStorage.second);
         $("#3rd").text(localStorage.third);
     } else {
-        $("#topScores").html("<h4>Unable to save scores with current browser</h4>")
+        $("#topScores").html("<h4>Unable to save scores with current browser</h4>");
     }
 
-    // Opens Introduction Modal as soon as the user lands on the page
+    // Open Introduction Modal as soon as the user lands on the page
     $("#introductionModal").modal("show");
     $("#playButton,#replayButton").click(function () {
         $("#introductionModal,#replayModal").modal("hide");
@@ -17,12 +17,12 @@ $(document).ready(function () {
     });
 
     // Arrays containing the words to guess
-    var animals = ["ELEPHANT", "CROCODILE", "RABBIT", "EAGLE", "LION", "PANDA", "GIRAFFE", "FROG", "WHALE", "CHAMELEON", "OCTOPUS", "DOLPHIN", "ZEBRA", "WOLF", "FOX", "FALCON", "ARMADILLO", "BEETLE", "KOALA", "JAGUAR"]
-    var movies = ["JURASSIC PARK", "THE BIG LEBOWSKI", "PULP FICTION", "THE WIZARD OF OZ", "FORREST GUMP", "JAWS", "APOCALYPSE NOW", "THE LORD OF THE RINGS", "INCEPTION", "A CLOCKWORK ORANGE", "FULL METAL JACKET", "FIGHT CLUB", "THE MATRIX", "JOKER", "GLADIATOR", "BLADE RUNNER", "MAD MAX", "ALIEN", "BACK TO THE FUTURE", "STAR WARS"]
-    var sports = ["FOOTBALL", "CRICKET", "BASKETBALL", "HOCKEY", "TENNIS", "VOLLEYBALL", "GOLF", "RUGBY", "BOXING", "SKIING", "ARCHERY", "HANDBALL", "FENCING", "MARATHON"]
-    var cities = ["TIRANA", "VIENNA", "BRUSSELS", "SOFIA", "PRAGUE", "COPENHAGEN", "BERLIN", "ATHENS", "BUDAPEST", "AMSTERDAM", "MONACO", "LONDON", "ROME", "SYDNEY", "MOSCOW", "STOCKHOLM", "INSTANBUL", "DUBLIN", "HONG KONG", "NEW YORK", "RIO DE JANEIRO"]
-    var jobs = ["SOMMELIER", "TAXI DRIVER", "PLUMBER", "DEVELOPER", "TRAINER", "TAILOR", "COOK", "TEACHER", "BARISTA", "BARBER", "FARMER", "LAWYER", "NURSE", "SURGEON", "ELECTRICIAN", "JOURNALIST", "FIREMAN", "ENGINEER", "SALESMAN", "LIFEGUARD", "DETECTIVE"]
-    var all = animals.concat(movies, sports, cities, jobs)
+    var animals = ["ELEPHANT", "CROCODILE", "RABBIT", "EAGLE", "LION", "PANDA", "GIRAFFE", "FROG", "WHALE", "CHAMELEON", "OCTOPUS", "DOLPHIN", "ZEBRA", "WOLF", "FOX", "FALCON", "ARMADILLO", "BEETLE", "KOALA", "JAGUAR"];
+    var movies = ["JURASSIC PARK", "THE BIG LEBOWSKI", "PULP FICTION", "THE WIZARD OF OZ", "FORREST GUMP", "JAWS", "APOCALYPSE NOW", "THE LORD OF THE RINGS", "INCEPTION", "A CLOCKWORK ORANGE", "FULL METAL JACKET", "FIGHT CLUB", "THE MATRIX", "JOKER", "GLADIATOR", "BLADE RUNNER", "MAD MAX", "ALIEN", "BACK TO THE FUTURE", "STAR WARS"];
+    var sports = ["FOOTBALL", "CRICKET", "BASKETBALL", "HOCKEY", "TENNIS", "VOLLEYBALL", "GOLF", "RUGBY", "BOXING", "SKIING", "ARCHERY", "HANDBALL", "FENCING", "MARATHON"];
+    var cities = ["TIRANA", "VIENNA", "BRUSSELS", "SOFIA", "PRAGUE", "COPENHAGEN", "BERLIN", "ATHENS", "BUDAPEST", "AMSTERDAM", "MONACO", "LONDON", "ROME", "SYDNEY", "MOSCOW", "STOCKHOLM", "INSTANBUL", "DUBLIN", "HONG KONG", "NEW YORK", "RIO DE JANEIRO"];
+    var jobs = ["SOMMELIER", "TAXI DRIVER", "PLUMBER", "DEVELOPER", "TRAINER", "TAILOR", "COOK", "TEACHER", "BARISTA", "BARBER", "FARMER", "LAWYER", "NURSE", "SURGEON", "ELECTRICIAN", "JOURNALIST", "FIREMAN", "ENGINEER", "SALESMAN", "LIFEGUARD", "DETECTIVE"];
+    var all = animals.concat(movies, sports, cities, jobs);
 
     // Other global variables
     var wordToGuess; // The randomly drawn word
@@ -32,33 +32,33 @@ $(document).ready(function () {
     var finishTime; // Records the game end time
     var points = 0; // Updates based on user guesses
 
-
+    // The main object containing the functions to run the game
     var game = {
-        // Draws a random word from the user selected theme and initiates the game
+        // Draw a random word from the user selected theme and initiate the game
         selectWord: {
             animals: function () {
                 wordToGuess = animals[Math.floor(Math.random() * animals.length)];
-                game.initiate()
+                game.initiate();
             },
             movies: function () {
                 wordToGuess = movies[Math.floor(Math.random() * movies.length)];
-                game.initiate()
+                game.initiate();
             },
             sports: function () {
                 wordToGuess = sports[Math.floor(Math.random() * sports.length)];
-                game.initiate()
+                game.initiate();
             },
             cities: function () {
                 wordToGuess = cities[Math.floor(Math.random() * cities.length)];
-                game.initiate()
+                game.initiate();
             },
             jobs: function () {
                 wordToGuess = jobs[Math.floor(Math.random() * jobs.length)];
-                game.initiate()
+                game.initiate();
             },
             all: function () {
                 wordToGuess = all[Math.floor(Math.random() * all.length)];
-                game.initiate()
+                game.initiate();
             },
         },
 
@@ -67,8 +67,7 @@ $(document).ready(function () {
             $("#selectionModal").modal("hide");
             $("#figure").attr("src", "assets/images/6_baloon(s).png");
             var d = new Date();
-            startTime = d.getTime()
-
+            startTime = d.getTime();
             for (char of wordToGuess) {
                 if (char == " ") {
                     output.push(char);
@@ -98,7 +97,6 @@ $(document).ready(function () {
                     }
                 }
             }
-
             if (error) {
                 lives--;
                 // Update the figure
@@ -121,7 +119,7 @@ $(document).ready(function () {
             else if (newRecord > localStorage.first) {
                 localStorage.third = localStorage.second;
                 localStorage.second = localStorage.first;
-                localStorage.first = newRecord
+                localStorage.first = newRecord;
             }
             else if (newRecord > localStorage.second) {
                 localStorage.third = localStorage.second;
@@ -137,7 +135,7 @@ $(document).ready(function () {
             // Prepare the modal 
             $("#solution").html(`<h4>The word to guess was <b>` + wordToGuess + `</b>`);
             var d = new Date();
-            finishTime = d.getTime()
+            finishTime = d.getTime();
             var seconds = Math.round((finishTime - startTime) / 1000);
             var score = points - seconds;
             if (score < 0) { score = 0 };
@@ -168,15 +166,15 @@ $(document).ready(function () {
 
     // Letter selection
     $(".btn-key").click(function () {
-        $(this).attr("disabled", true)
+        $(this).attr("disabled", true);
         game.guessLetter(this.textContent);
     });
 
     // Home button
-    $("#home").click(function () { location.reload(); })
+    $("#home").click(function () { location.reload(); });
 
     // Audio-toggle button
     // $("#audioToggle").click(function () {
-    // })
+    // });
 
 });
