@@ -24,13 +24,13 @@ $(document).ready(function () {
     var jobs = ["SOMMELIER", "TAXI DRIVER", "PLUMBER", "DEVELOPER", "TRAINER", "TAILOR", "COOK", "TEACHER", "BARISTA", "BARBER", "FARMER", "LAWYER", "NURSE", "SURGEON", "ELECTRICIAN", "JOURNALIST", "FIREMAN", "ENGINEER", "SALESMAN", "LIFEGUARD", "DETECTIVE"]
     var all = animals.concat(movies, sports, cities, jobs)
 
-    // Global variables
+    // Other global variables
     var wordToGuess; // The randomly drawn word
     var output = []; // Keeps track of the letters chosen by the player, the results will be print in the homonymous ID in HTML
     var lives = 6; // Decreases by one when the player makes a mistake
     var startTime; // Records the game start time
     var finishTime; // Records the game end time
-    var score = 0; // Updates based on user guesses
+    var points = 0; // Updates based on user guesses
 
 
     var game = {
@@ -90,7 +90,7 @@ $(document).ready(function () {
                     $("#output").html(output);
                     error = false;
                     // Update score
-                    score += 100;
+                    points += 100;
                     // Check winning condition
                     if (output.toString().replace(/,/g, "") == wordToGuess) {
                         $("#outcome").text("Well Done!");
@@ -104,8 +104,8 @@ $(document).ready(function () {
                 // Update the figure
                 $("#figure").attr("src", `assets/images/` + lives + `_baloon(s).png`);
                 // Update score
-                score -= 50;
-                if (score < 0) { score = 0 };
+                points -= 50;
+                if (points < 0) { points = 0 };
                 // Check losing condition
                 if (lives == 0) {
                     $("#outcome").text("You Lost...");
@@ -139,19 +139,19 @@ $(document).ready(function () {
             var d = new Date();
             finishTime = d.getTime()
             var seconds = Math.round((finishTime - startTime) / 1000);
-            var finalScore = score - seconds;
-            if (finalScore < 0) { finalScore = 0 };
-            $("#score").text(`Score: ` + finalScore);
+            var score = points - seconds;
+            if (score < 0) { score = 0 };
+            $("#score").text(`Score: ` + score);
             $("#time").text(`Time: ` + seconds + `s`);
             // Check if the score set a record
-            if (finalScore > localStorage.third || localStorage.third == undefined) { game.updateTopScores(finalScore); }
+            if (score > localStorage.third || localStorage.third == undefined) { game.updateTopScores(score); }
             // Show the modal
             $("#replayModal").modal("show");
             // Reset key buttons and global variables
             $(".btn-key").attr("disabled", false);
             output = [];
             lives = 6;
-            score = 0;
+            points = 0;
         }
     };
 
