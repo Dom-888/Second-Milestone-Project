@@ -10,7 +10,6 @@ body {
     /* The background image was designed by Hello-Pixel and was downloaded from http://www.freepik.com */
     /* A fallback color has been set, in case the browser fails to load the image */
     background: url(../images/background-sm.jpg) #81DAFC; 
-    font-family: "roboto", sans-serif;
     padding: 0 5vw;
 }
 
@@ -56,6 +55,7 @@ body {
 /*---------------Modals---------------*/
 
 .modal {
+    font-family: "roboto", sans-serif;
     color: #000;
     text-align: center;
     overflow-y: auto;
