@@ -83,55 +83,45 @@ $(document).ready(function () {
         },
 
         // Check if the letter chosen by the user is part of the word to be guessed
-        guessLetter: function (letter) {
+        chooseLetter: function (letter) {
             console.log(wordToGuess) //For testing purpose only
             var error = true;
             var i;
             for (i = 0; i < wordToGuess.length; i++) {
                 if (wordToGuess[i] == letter) {
                     output[i] = letter;
-                    // If the user guesses the right letter:
-                    successSound.play();
-                    $("#output").html(output);
-                    points += 100;
                     error = false;
-                    // Check winning condition
-                    if (output.toString().replace(/,/g, "") == wordToGuess) {
-                        $("#outcome").text("Well Done!");
-                        game.over();
-                    }
+                    game.rightGuess();
                 }
             }
             if (error) {
-                // If the user guesses the wrong letter:
-                failSound.play();
-                lives--;
-                $("#figure").attr("src", `assets/images/` + lives + `_baloon(s).png`);
-                points -= 50;
-                if (points < 0) { points = 0 };
-                // Check losing condition
-                if (lives == 0) {
-                    $("#outcome").text("You Lost...");
-                    game.over();
-                }
+                game.wrongGuess();
             }
         },
 
-        // Add new records to the leaderboard, move old top-scores to proper position
-        updateTopScores: function (newRecord) {
-            if (localStorage.first == undefined) { localStorage.first = newRecord }
-            else if (localStorage.second == undefined) { localStorage.second = newRecord }
-            else if (newRecord > localStorage.first) {
-                localStorage.third = localStorage.second;
-                localStorage.second = localStorage.first;
-                localStorage.first = newRecord;
+        // Play sound effect, update displayed word and score
+        rightGuess: function () {
+            successSound.play();
+            $("#output").html(output);
+            points += 100;
+            // Check winning condition
+            if (output.toString().replace(/,/g, "") == wordToGuess) {
+                $("#outcome").text("Well Done!");
+                game.over();
             }
-            else if (newRecord > localStorage.second) {
-                localStorage.third = localStorage.second;
-                localStorage.second = newRecord;
-            }
-            else {
-                localStorage.third = newRecord;
+        },
+
+        // Play sound effect, update image and score
+        wrongGuess: function () {
+            failSound.play();
+            lives--;
+            $("#figure").attr("src", `assets/images/` + lives + `_baloon(s).png`);
+            points -= 50;
+            if (points < 0) { points = 0 };
+            // Check losing condition
+            if (lives == 0) {
+                $("#outcome").text("You Lost...");
+                game.over();
             }
         },
 
@@ -155,6 +145,24 @@ $(document).ready(function () {
             output = [];
             lives = 6;
             points = 0;
+        },
+        
+        // Add new records to the leaderboard, move old top-scores to proper position
+        updateTopScores: function (newRecord) {
+            if (localStorage.first == undefined) { localStorage.first = newRecord }
+            else if (localStorage.second == undefined) { localStorage.second = newRecord }
+            else if (newRecord > localStorage.first) {
+                localStorage.third = localStorage.second;
+                localStorage.second = localStorage.first;
+                localStorage.first = newRecord;
+            }
+            else if (newRecord > localStorage.second) {
+                localStorage.third = localStorage.second;
+                localStorage.second = newRecord;
+            }
+            else {
+                localStorage.third = newRecord;
+            }
         }
     };
 
@@ -171,7 +179,7 @@ $(document).ready(function () {
     // Letter selection
     $(".btn-key").click(function () {
         $(this).attr("disabled", true);
-        game.guessLetter(this.textContent);
+        game.chooseLetter(this.textContent);
     });
 
     // Home button
