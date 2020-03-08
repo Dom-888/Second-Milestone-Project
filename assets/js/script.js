@@ -24,6 +24,10 @@ $(document).ready(function () {
     const jobs = ["SOMMELIER", "TAXI DRIVER", "PLUMBER", "DEVELOPER", "TRAINER", "TAILOR", "COOK", "TEACHER", "BARISTA", "BARBER", "FARMER", "LAWYER", "NURSE", "SURGEON", "ELECTRICIAN", "JOURNALIST", "FIREMAN", "ENGINEER", "SALESMAN", "LIFEGUARD", "DETECTIVE"]
     const all = animals.concat(movies, sports, cities, jobs)
 
+    // Sound effects
+    const successSound = new Audio("assets/audio/success.mp3");
+    const failSound = new Audio("assets/audio/pop.mp3");
+
     // Other global variables
     var wordToGuess; // The randomly drawn word
     var output = []; // Keeps track of the letters chosen by the player, the results will be print in the homonymous ID in HTML
@@ -86,10 +90,11 @@ $(document).ready(function () {
             for (i = 0; i < wordToGuess.length; i++) {
                 if (wordToGuess[i] == letter) {
                     output[i] = letter;
+                    // If the user guesses the right letter:
+                    successSound.play();
                     $("#output").html(output);
-                    error = false;
-                    // Update score
                     points += 100;
+                    error = false;
                     // Check winning condition
                     if (output.toString().replace(/,/g, "") == wordToGuess) {
                         $("#outcome").text("Well Done!");
@@ -98,10 +103,10 @@ $(document).ready(function () {
                 }
             }
             if (error) {
-                lives--;
-                // Update the figure
+                // If the user guesses the wrong letter:
+                failSound.play();
+                lives--;                
                 $("#figure").attr("src", `assets/images/` + lives + `_baloon(s).png`);
-                // Update score
                 points -= 50;
                 if (points < 0) { points = 0 };
                 // Check losing condition
