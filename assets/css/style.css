@@ -72,11 +72,6 @@ body {
     margin: 0;
 }
 
-#selectionModal .col{
-    margin-top: 0 auto;
-    padding-top: 0 auto;
-}
-
 #topScores {
     max-width: 150px;
     font-size:  1.2em;
