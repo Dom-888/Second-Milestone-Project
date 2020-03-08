@@ -64,15 +64,10 @@ body {
     margin: 0 7.5%;
 }
 
-#selectionModal {
-    text-align: center;
-}
-
 #selectionModal .container{
     border: none;
     padding: 0;
     margin: 0;
-
 }
 
 #selectionModal .col{
@@ -83,10 +78,6 @@ body {
 #topScores {
     max-width: 150px;
     font-size:  1.2em;
-}
-
-#score, #time {
-    display: inline;
 }
 
 /*---------------Buttons---------------*/
