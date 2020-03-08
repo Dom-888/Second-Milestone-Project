@@ -105,7 +105,7 @@ $(document).ready(function () {
             if (error) {
                 // If the user guesses the wrong letter:
                 failSound.play();
-                lives--;                
+                lives--;
                 $("#figure").attr("src", `assets/images/` + lives + `_baloon(s).png`);
                 points -= 50;
                 if (points < 0) { points = 0 };
@@ -178,7 +178,15 @@ $(document).ready(function () {
     $("#home").click(function () { location.reload(); });
 
     // Audio-toggle button
-    // $("#audioToggle").click(function () {
-    // });
+    $("#audioToggle").click(function () {
+        $("i", this).toggleClass("fa-volume-up fa-volume-off");
+        if (successSound.muted == false && failSound.muted == false) {
+            successSound.muted = true;
+            failSound.muted = true;
+        } else {
+            successSound.muted = false;
+            failSound.muted = false;
+        };
+    });
 
 });
