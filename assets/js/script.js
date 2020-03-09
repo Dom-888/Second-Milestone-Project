@@ -33,11 +33,11 @@ $(document).ready(function () {
     $("#landingModal").modal("show");
 
     // Arrays containing the words to guess
-    const animals = ["ELEPHANT", "CROCODILE", "RABBIT", "EAGLE", "LION", "PANDA", "GIRAFFE", "FROG", "WHALE", "CHAMELEON", "OCTOPUS", "DOLPHIN", "ZEBRA", "WOLF", "FOX", "FALCON", "ARMADILLO", "BEETLE", "KOALA", "JAGUAR"];
-    const movies = ["JURASSIC PARK", "THE BIG LEBOWSKI", "PULP FICTION", "THE WIZARD OF OZ", "FORREST GUMP", "JAWS", "APOCALYPSE NOW", "THE LORD OF THE RINGS", "INCEPTION", "A CLOCKWORK ORANGE", "FULL METAL JACKET", "FIGHT CLUB", "THE MATRIX", "JOKER", "GLADIATOR", "BLADE RUNNER", "MAD MAX", "ALIEN", "BACK TO THE FUTURE", "STAR WARS"]
-    const sports = ["FOOTBALL", "CRICKET", "BASKETBALL", "HOCKEY", "TENNIS", "VOLLEYBALL", "GOLF", "RUGBY", "BOXING", "SKIING", "ARCHERY", "HANDBALL", "FENCING", "MARATHON"];
-    const cities = ["TIRANA", "VIENNA", "BRUSSELS", "SOFIA", "PRAGUE", "COPENHAGEN", "BERLIN", "ATHENS", "BUDAPEST", "AMSTERDAM", "MONACO", "LONDON", "ROME", "SYDNEY", "MOSCOW", "STOCKHOLM", "INSTANBUL", "DUBLIN", "HONG KONG", "NEW YORK", "RIO DE JANEIRO"];
-    const jobs = ["SOMMELIER", "TAXI DRIVER", "PLUMBER", "DEVELOPER", "TRAINER", "TAILOR", "COOK", "TEACHER", "BARISTA", "BARBER", "FARMER", "LAWYER", "NURSE", "SURGEON", "ELECTRICIAN", "JOURNALIST", "FIREMAN", "ENGINEER", "SALESMAN", "LIFEGUARD", "DETECTIVE"];
+    const animals = ["elephant", "crocodile", "rabbit", "eagle", "lion", "panda", "giraffe", "frog", "whale", "chameleon", "octopus", "dolphin", "zebra", "wolf", "fox", "falcon", "armadillo", "beetle", "koala", "jaguar"];
+    const movies = ["jurassic park", "the big lebowski", "pulp fiction", "the wizard of oz", "forrest gump", "jaws", "apocalypse now", "the lord of the rings", "inception", "a clockwork orange", "full metal jacket", "fight club", "the matrix", "joker", "gladiator", "blade runner", "mad max", "alien", "back to the future", "star wars"]
+    const sports = ["football", "cricket", "basketball", "hockey", "tennis", "volleyball", "golf", "rugby", "boxing", "skiing", "archery", "handball", "fencing", "marathon"];
+    const cities = ["tirana", "vienna", "brussels", "sofia", "prague", "copenhagen", "berlin", "athens", "budapest", "amsterdam", "monaco", "london", "rome", "sydney", "moscow", "stockholm", "instanbul", "dublin", "hong kong", "new york", "rio de janeiro"];
+    const jobs = ["sommelier", "taxi driver", "plumber", "developer", "trainer", "tailor", "cook", "teacher", "barista", "barber", "farmer", "lawyer", "nurse", "surgeon", "electrician", "journalist", "fireman", "engineer", "salesman", "lifeguard", "detective"];
     const all = animals.concat(movies, sports, cities, jobs);
 
     // Sound effects
@@ -84,6 +84,7 @@ $(document).ready(function () {
 
         // Ready the game
         initiate: function () {
+            wordToGuess = wordToGuess.toUpperCase();
             $("#selectionModal").modal("hide");
             $("#figure").attr("src", "assets/images/6_baloon(s).png");
             var d = new Date();
