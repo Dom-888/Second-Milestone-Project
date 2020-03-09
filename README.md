@@ -48,21 +48,24 @@ In this section, you should mention all of the languages, frameworks, libraries,
     - [Google Fonts](https://fonts.google.com/) was used to import the fonts used in the website.
     - [Font Awesome](https://fontawesome.com/) was used to create button icons.
 
+- **Plugins**
+    - [Textillate](https://textillate.js.org/) was used to animate the title and the "New Record" signal.
+
 - **Frameworks**
-    - [Bootstrap](https://getbootstrap.com/) was used extensively to create the responsive design, in particular the grid and modal classes.
+    - [Bootstrap](https://getbootstrap.com/) was used extensively to create the responsive design, in particular the grid and the modal classes.
     - [Jasmine](https://jasmine.github.io/) was used to automatically test the JavaScript code.
 
 - **API**
     - [Web Storage](https://www.w3schools.com/html/html5_webstorage.asp) was used to save scores in the leaderbord.
 
 - **Services**
-    - [GitPod](https://www.gitpod.io/) was the main IDE in which the project was developed
+    - [GitPod](https://www.gitpod.io/) was the main IDE in which the project was developed.
     - [Git](https://git-scm.com/) was used for version control during the development process.
     - [GitHub](https://github.com/) was used for remote repository hosting.
-    - [Chrome devTool](https://developers.google.com/web/tools/chrome-devtools) was used to test responsiveness and quickly debug code.
-    - [HTML Validator](https://validator.w3.org/) was used to test the HTML code
-    - [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to test the CSS code
-    - [JSHint analysis](https://jigsaw.w3.org/css-validator/) was used to test the JavaScript code
+    - [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) was used to test responsiveness and quickly debug code.
+    - [HTML Validator](https://validator.w3.org/) was used to test the HTML code.
+    - [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to test the CSS code.
+    - [JSHint analysis](https://jigsaw.w3.org/css-validator/) was used to test the JavaScript code.
     - [Autoprefixer](https://autoprefixer.github.io/) was used to add prefixes in the CSS for cross-browser support.
     - [Figma](https://www.figma.com/) was used for wireframing
     - [Online Audio Converter](https://online-audio-converter.com/it/) was used for simple sounds manipulation.
