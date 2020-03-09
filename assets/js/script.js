@@ -11,10 +11,6 @@ $(document).ready(function () {
 
     // Open Introduction Modal as soon as the user lands on the page
     $("#introductionModal").modal("show");
-    $("#playButton,#replayButton").click(function () {
-        $("#introductionModal,#replayModal").modal("hide");
-        $("#selectionModal").modal("show");
-    });
 
     // Arrays containing the words to guess
     const animals = ["ELEPHANT", "CROCODILE", "RABBIT", "EAGLE", "LION", "PANDA", "GIRAFFE", "FROG", "WHALE", "CHAMELEON", "OCTOPUS", "DOLPHIN", "ZEBRA", "WOLF", "FOX", "FALCON", "ARMADILLO", "BEETLE", "KOALA", "JAGUAR"];
@@ -163,10 +159,18 @@ $(document).ready(function () {
             else {
                 localStorage.third = newRecord;
             }
+        $("#1st").text(localStorage.first);
+        $("#2nd").text(localStorage.second);
+        $("#3rd").text(localStorage.third);
         }
     };
 
     /*---------------User inputs---------------*/
+
+    $("#playButton").click(function () {
+        $("#introductionModal").modal("hide");
+        $("#selectionModal").modal("show");
+    });
 
     // Theme selection 
     $("#animals").click(function () { game.selectWord.animals(); });
@@ -195,6 +199,11 @@ $(document).ready(function () {
             successSound.muted = false;
             failSound.muted = false;
         }
+    });
+
+    $("#continueButton").click(function () {
+        $("#replayModal").modal("hide");
+        $("#introductionModal").modal("show");
     });
 
 });
