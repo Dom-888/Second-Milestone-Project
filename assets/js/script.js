@@ -155,7 +155,7 @@ $(document).ready(function () {
             $("#score").text(`Score: ` + score);
             $("#time").text(`Time: ` + seconds + `s`);
             // Check if the score set a record
-            if (score > localStorage.third || localStorage.third == undefined) { game.updateTopScores(score); }
+            if (score > localStorage.third || localStorage.third == undefined && score > 0) { game.updateTopScores(score); }
             // Show the modal
             $("#resultsModal").modal("show");
             // Reset key buttons and global variables
@@ -168,7 +168,6 @@ $(document).ready(function () {
         // Add new records to the leaderboard, move old top-scores to proper position
         updateTopScores: function (newRecord) {
             $("#newRecord").show();
-            console.log("show")
             if (localStorage.first == undefined) { localStorage.first = newRecord; }
             else if (localStorage.second == undefined) { localStorage.second = newRecord; }
             else if (newRecord > localStorage.first) {
