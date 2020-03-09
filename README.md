@@ -1,4 +1,4 @@
-# Your Project's Name
+# The Hangaman Game
 
 This is a digital version of the classic paper-and-pencil game, restyled to be more child-friendly.
  
@@ -53,7 +53,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
     - [Jasmine](https://jasmine.github.io/) was used to automatically test the JavaScript code.
 
 - **API**
-    - [Web Storage](https://www.w3schools.com/html/html5_webstorage.asp) to save scores in the leaderbord.
+    - [Web Storage](https://www.w3schools.com/html/html5_webstorage.asp) was used to save scores in the leaderbord.
 
 - **Services**
     - [GitPod](https://www.gitpod.io/) was the main IDE in which the project was developed
