@@ -17,12 +17,12 @@ $(document).ready(function () {
     });
 
     // Arrays containing the words to guess
-    const animals = ["ELEPHANT", "CROCODILE", "RABBIT", "EAGLE", "LION", "PANDA", "GIRAFFE", "FROG", "WHALE", "CHAMELEON", "OCTOPUS", "DOLPHIN", "ZEBRA", "WOLF", "FOX", "FALCON", "ARMADILLO", "BEETLE", "KOALA", "JAGUAR"]
+    const animals = ["ELEPHANT", "CROCODILE", "RABBIT", "EAGLE", "LION", "PANDA", "GIRAFFE", "FROG", "WHALE", "CHAMELEON", "OCTOPUS", "DOLPHIN", "ZEBRA", "WOLF", "FOX", "FALCON", "ARMADILLO", "BEETLE", "KOALA", "JAGUAR"];
     const movies = ["JURASSIC PARK", "THE BIG LEBOWSKI", "PULP FICTION", "THE WIZARD OF OZ", "FORREST GUMP", "JAWS", "APOCALYPSE NOW", "THE LORD OF THE RINGS", "INCEPTION", "A CLOCKWORK ORANGE", "FULL METAL JACKET", "FIGHT CLUB", "THE MATRIX", "JOKER", "GLADIATOR", "BLADE RUNNER", "MAD MAX", "ALIEN", "BACK TO THE FUTURE", "STAR WARS"]
-    const sports = ["FOOTBALL", "CRICKET", "BASKETBALL", "HOCKEY", "TENNIS", "VOLLEYBALL", "GOLF", "RUGBY", "BOXING", "SKIING", "ARCHERY", "HANDBALL", "FENCING", "MARATHON"]
-    const cities = ["TIRANA", "VIENNA", "BRUSSELS", "SOFIA", "PRAGUE", "COPENHAGEN", "BERLIN", "ATHENS", "BUDAPEST", "AMSTERDAM", "MONACO", "LONDON", "ROME", "SYDNEY", "MOSCOW", "STOCKHOLM", "INSTANBUL", "DUBLIN", "HONG KONG", "NEW YORK", "RIO DE JANEIRO"]
-    const jobs = ["SOMMELIER", "TAXI DRIVER", "PLUMBER", "DEVELOPER", "TRAINER", "TAILOR", "COOK", "TEACHER", "BARISTA", "BARBER", "FARMER", "LAWYER", "NURSE", "SURGEON", "ELECTRICIAN", "JOURNALIST", "FIREMAN", "ENGINEER", "SALESMAN", "LIFEGUARD", "DETECTIVE"]
-    const all = animals.concat(movies, sports, cities, jobs)
+    const sports = ["FOOTBALL", "CRICKET", "BASKETBALL", "HOCKEY", "TENNIS", "VOLLEYBALL", "GOLF", "RUGBY", "BOXING", "SKIING", "ARCHERY", "HANDBALL", "FENCING", "MARATHON"];
+    const cities = ["TIRANA", "VIENNA", "BRUSSELS", "SOFIA", "PRAGUE", "COPENHAGEN", "BERLIN", "ATHENS", "BUDAPEST", "AMSTERDAM", "MONACO", "LONDON", "ROME", "SYDNEY", "MOSCOW", "STOCKHOLM", "INSTANBUL", "DUBLIN", "HONG KONG", "NEW YORK", "RIO DE JANEIRO"];
+    const jobs = ["SOMMELIER", "TAXI DRIVER", "PLUMBER", "DEVELOPER", "TRAINER", "TAILOR", "COOK", "TEACHER", "BARISTA", "BARBER", "FARMER", "LAWYER", "NURSE", "SURGEON", "ELECTRICIAN", "JOURNALIST", "FIREMAN", "ENGINEER", "SALESMAN", "LIFEGUARD", "DETECTIVE"];
+    const all = animals.concat(movies, sports, cities, jobs);
 
     // Sound effects
     const successSound = new Audio("assets/audio/success.mp3");
@@ -84,7 +84,7 @@ $(document).ready(function () {
 
         // Check if the letter chosen by the user is part of the word to be guessed
         chooseLetter: function (letter) {
-            console.log(wordToGuess) //For testing purpose only
+            console.log(wordToGuess); //For testing purpose only
             var error = true;
             var i;
             for (i = 0; i < wordToGuess.length; i++) {
@@ -117,7 +117,7 @@ $(document).ready(function () {
             lives--;
             $("#figure").attr("src", `assets/images/` + lives + `_baloon(s).png`);
             points -= 50;
-            if (points < 0) { points = 0 };
+            if (points < 0) { points = 0; }
             // Check losing condition
             if (lives == 0) {
                 $("#outcome").text("You Lost...");
@@ -133,7 +133,7 @@ $(document).ready(function () {
             finishTime = d.getTime();
             var seconds = Math.round((finishTime - startTime) / 1000);
             var score = points - seconds;
-            if (score < 0) { score = 0 };
+            if (score < 0) { score = 0; }
             $("#score").text(`Score: ` + score);
             $("#time").text(`Time: ` + seconds + `s`);
             // Check if the score set a record
@@ -149,8 +149,8 @@ $(document).ready(function () {
         
         // Add new records to the leaderboard, move old top-scores to proper position
         updateTopScores: function (newRecord) {
-            if (localStorage.first == undefined) { localStorage.first = newRecord }
-            else if (localStorage.second == undefined) { localStorage.second = newRecord }
+            if (localStorage.first == undefined) { localStorage.first = newRecord; }
+            else if (localStorage.second == undefined) { localStorage.second = newRecord; }
             else if (newRecord > localStorage.first) {
                 localStorage.third = localStorage.second;
                 localStorage.second = localStorage.first;
@@ -194,7 +194,7 @@ $(document).ready(function () {
         } else {
             successSound.muted = false;
             failSound.muted = false;
-        };
+        }
     });
 
 });
