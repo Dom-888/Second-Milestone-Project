@@ -1,17 +1,23 @@
 # Your Project's Name
 
-One or two paragraphs providing an overview of your project.
-
-Essentially, this part is your sales pitch.
+This is a digital version of the classic paper-and-pencil game, restyled to be more child-friendly.
  
 ## UX
  
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+#### User Stories
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+#### Strategy
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+#### Scope
+
+#### Skeleton
+
+##### Wireframes
+
+The wireframes were creating using Figma and can be found here:
+https://www.figma.com/file/W6byLl333Stnds9vzlbSOB/Second-milestone-project?node-id=8%3A23 
+
+#### Surface
 
 ## Features
 
@@ -32,8 +38,38 @@ In addition, you may also use this section to discuss plans for additional featu
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+- **Programming languages**
+    - [HTMLS](https://devdocs.io/html/) 
+    - [CSS3](https://devdocs.io/css/) 
+    - [JavaScript](https://devdocs.io/javascript/) 
+
+- **Libraries**
+    - [JQuery](https://jquery.com) was used to simplify DOM manipulation.
+    - [Google Fonts](https://fonts.google.com/) was used to import the fonts used in the website.
+    - [Font Awesome](https://fontawesome.com/) was used to create button icons.
+
+- **Frameworks**
+    - [Bootstrap](https://getbootstrap.com/) was used extensively to create the responsive design, in particular the grid and modal classes.
+    - [Jasmine](https://jasmine.github.io/) was used to automatically test the JavaScript code.
+
+- **API**
+    - [Web Storage](https://www.w3schools.com/html/html5_webstorage.asp) to save scores in the leaderbord.
+
+- **Services**
+    - [GitPod](https://www.gitpod.io/) was the main IDE in which the project was developed
+    - [Git](https://git-scm.com/) was used for version control during the development process.
+    - [GitHub](https://github.com/) was used for remote repository hosting.
+    - [Chrome devTool](https://developers.google.com/web/tools/chrome-devtools) was used to test responsiveness and quickly debug code.
+    - [HTML Validator](https://validator.w3.org/) was used to test the HTML code
+    - [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to test the CSS code
+    - [JSHint analysis](https://jigsaw.w3.org/css-validator/) was used to test the JavaScript code
+    - [Autoprefixer](https://autoprefixer.github.io/) was used to add prefixes in the CSS for cross-browser support.
+    - [Figma](https://www.figma.com/) was used for wireframing
+    - [Online Audio Converter](https://online-audio-converter.com/it/) was used for simple sounds manipulation.
+
+- **Software**
+    - [Paint.net](https://www.getpaint.net/) was used for simple images manipulation.
+    - [Visual Studio Code](https://code.visualstudio.com/) was used for testing snippet of JS code.
 
 
 ## Testing
