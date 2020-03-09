@@ -9,7 +9,7 @@ $(document).ready(function () {
         $("#topScores").html("<h5>Unable to save scores with current browser</h5>");
     }
 
-    // Apply textillate effect to title
+    // Apply textillate effects
     $('#title').textillate({
         in: {
             effect: 'tada',
@@ -21,6 +21,12 @@ $(document).ready(function () {
             reverse: true
         },
         loop: true
+    });
+    $('#newRecord').textillate({
+        in: {
+            effect: 'bounceInDown',
+            delay: 80
+        },
     });
 
     // Open Landing Modal
@@ -90,6 +96,7 @@ $(document).ready(function () {
                 }
             }
             $("#output").html(output);
+            $("#newRecord").hide();
         },
 
         // Check if the letter chosen by the user is part of the word to be guessed
@@ -159,6 +166,8 @@ $(document).ready(function () {
 
         // Add new records to the leaderboard, move old top-scores to proper position
         updateTopScores: function (newRecord) {
+            $("#newRecord").show();
+            console.log("show")
             if (localStorage.first == undefined) { localStorage.first = newRecord; }
             else if (localStorage.second == undefined) { localStorage.second = newRecord; }
             else if (newRecord > localStorage.first) {

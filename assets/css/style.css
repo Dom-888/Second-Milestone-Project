@@ -76,6 +76,11 @@ body {
     font-size:  1.2em;
 }
 
+#newRecord {
+    /* display: none; */
+    color: #FF0000;
+}
+
 /*---------------Buttons---------------*/
 
 .btn {
