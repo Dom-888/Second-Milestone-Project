@@ -9,6 +9,20 @@ $(document).ready(function () {
         $("#topScores").html("<h5>Unable to save scores with current browser</h5>");
     }
 
+    // Apply textillate effect to title
+    $('#title').textillate({
+        in: {
+            effect: 'tada',
+            delay: 100,
+        },
+        out: {
+            effect: 'tada',
+            delay: 100,
+            reverse: true
+        },
+        loop: true
+    });
+
     // Open Landing Modal
     $("#landingModal").modal("show");
 
@@ -142,7 +156,7 @@ $(document).ready(function () {
             lives = 6;
             points = 0;
         },
-        
+
         // Add new records to the leaderboard, move old top-scores to proper position
         updateTopScores: function (newRecord) {
             if (localStorage.first == undefined) { localStorage.first = newRecord; }
@@ -159,9 +173,9 @@ $(document).ready(function () {
             else {
                 localStorage.third = newRecord;
             }
-        $("#1st").text(localStorage.first);
-        $("#2nd").text(localStorage.second);
-        $("#3rd").text(localStorage.third);
+            $("#1st").text(localStorage.first);
+            $("#2nd").text(localStorage.second);
+            $("#3rd").text(localStorage.third);
         }
     };
 
