@@ -9,8 +9,8 @@ $(document).ready(function () {
         $("#topScores").html("<h5>Unable to save scores with current browser</h5>");
     }
 
-    // Open Introduction Modal as soon as the user lands on the page
-    $("#introductionModal").modal("show");
+    // Open Landing Modal
+    $("#landingModal").modal("show");
 
     // Arrays containing the words to guess
     const animals = ["ELEPHANT", "CROCODILE", "RABBIT", "EAGLE", "LION", "PANDA", "GIRAFFE", "FROG", "WHALE", "CHAMELEON", "OCTOPUS", "DOLPHIN", "ZEBRA", "WOLF", "FOX", "FALCON", "ARMADILLO", "BEETLE", "KOALA", "JAGUAR"];
@@ -167,8 +167,9 @@ $(document).ready(function () {
 
     /*---------------User inputs---------------*/
 
+    // Play button
     $("#playButton").click(function () {
-        $("#introductionModal").modal("hide");
+        $("#landingModal").modal("hide");
         $("#selectionModal").modal("show");
     });
 
@@ -201,9 +202,10 @@ $(document).ready(function () {
         }
     });
 
+    // Continue button
     $("#continueButton").click(function () {
         $("#replayModal").modal("hide");
-        $("#introductionModal").modal("show");
+        $("#landingModal").modal("show");
     });
 
 });
