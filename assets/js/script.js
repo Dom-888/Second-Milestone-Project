@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     // Other global variables
     var wordToGuess; // The randomly drawn word
-    var output = []; // Keeps track of the letters chosen by the player, the results will be print in the homonymous ID in HTML
+    var output = []; // Keeps track of the letters chosen by the player, the result will be print in the homonymous ID in HTML
     var lives = 6; // Decreases by one when the player makes a mistake
     var startTime; // Records the game start time
     var finishTime; // Records the game end time
@@ -121,7 +121,7 @@ $(document).ready(function () {
             }
         },
 
-        // Display the Replay Modal and prepare a new game
+        // Display the Results Modal and prepare a new game
         over: function () {
             // Prepare the modal 
             $("#solution").html(`<h4>The word to guess was <b>` + wordToGuess + `</b>`);
@@ -135,7 +135,7 @@ $(document).ready(function () {
             // Check if the score set a record
             if (score > localStorage.third || localStorage.third == undefined) { game.updateTopScores(score); }
             // Show the modal
-            $("#replayModal").modal("show");
+            $("#resultsModal").modal("show");
             // Reset key buttons and global variables
             $(".btn-key").attr("disabled", false);
             output = [];
@@ -204,7 +204,7 @@ $(document).ready(function () {
 
     // Continue button
     $("#continueButton").click(function () {
-        $("#replayModal").modal("hide");
+        $("#resultsModal").modal("hide");
         $("#landingModal").modal("show");
     });
 
