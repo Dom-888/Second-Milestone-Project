@@ -1,6 +1,4 @@
-$(document).ready(function () {
-
-    // Load top scores from local storage
+   // Load top scores from local storage
     if (typeof (Storage) !== "undefined") {
         $("#1st").text(localStorage.first);
         $("#2nd").text(localStorage.second);
@@ -230,5 +228,3 @@ $(document).ready(function () {
         $("#resultsModal").modal("hide");
         $("#landingModal").modal("show");
     });
-
-});
