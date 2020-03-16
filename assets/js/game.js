@@ -163,21 +163,21 @@
         },
 
         // Add new records to the leaderboard, move old top-scores to proper position
-        updateTopScores: function (newRecord) {
+        updateTopScores: function (newScore) {
             $("#newRecord").show();
-            if (localStorage.first == undefined) { localStorage.first = newRecord; }
-            else if (localStorage.second == undefined) { localStorage.second = newRecord; }
-            else if (newRecord > localStorage.first) {
+            if (localStorage.first == undefined) { localStorage.first = newScore; }
+            else if (localStorage.second == undefined) { localStorage.second = newScore; }
+            else if (newScore > localStorage.first) {
                 localStorage.third = localStorage.second;
                 localStorage.second = localStorage.first;
-                localStorage.first = newRecord;
+                localStorage.first = newScore;
             }
-            else if (newRecord > localStorage.second) {
+            else if (newScore > localStorage.second) {
                 localStorage.third = localStorage.second;
-                localStorage.second = newRecord;
+                localStorage.second = newScore;
             }
             else {
-                localStorage.third = newRecord;
+                localStorage.third = newScore;
             }
             $("#1st").text(localStorage.first);
             $("#2nd").text(localStorage.second);
