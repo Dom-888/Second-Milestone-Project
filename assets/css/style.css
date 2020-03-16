@@ -12,8 +12,7 @@ body {
     padding: 0 5vw;
 }
 
-/* Cartoonish borders */
-#gameplay, .modal-content, .btn-action, #figure {
+.border-cartoonish {
     border: 3px solid #000;
     border-radius: 10px;
 }
@@ -32,7 +31,6 @@ body {
     margin: -2em 0 -1em;
 }
 
-/* The figure remains proportionate to the rest of the page on displays with very different width/height ratios */
 #figure {
     width: 30vh;
     height: 30vh;
