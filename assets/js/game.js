@@ -167,7 +167,7 @@
             $("#newRecord").show();
             if (localStorage.first == undefined) { localStorage.first = newScore; }
             else if (newScore > localStorage.first) {
-                localStorage.third = localStorage.second;
+                if (localStorage.second != undefined) { localStorage.third = localStorage.second }; //Prevents the "undefined" string from being assigned to localStorage.third 
                 localStorage.second = localStorage.first;
                 localStorage.first = newScore;
             }
