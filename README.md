@@ -1,23 +1,61 @@
 # The Hangaman Game
 
 This is a digital version of the classic paper-and-pencil game, restyled to be more child-friendly.
- 
+
+pic from http://ami.responsivedesign.is/
+
 ## UX
+
+The goal of the project was to create a game that is both nostalgic for adults and educational for children, but without the questionable taste of the original one. 
  
-#### User Stories
+#### User Stories
 
-#### Strategy
+As a player aged between 6 to 99 years old I want to:
 
-#### Scope
+1. The ability to intuitively understand how to play the game.
+2. The ability to choose different themes in which to play.
+3. A combination of visual and audio feedback after each move to make the game more engaging.
+4. A mute button to remove the sounds effect, in case they become annoying.
+5. The ability to see my top scores, so I can try to beat them.
+6. The ability to play on my smartphone as well as my tablet and my laptop.
 
-#### Skeleton
+### Design Choices
 
-##### Wireframes
+1. **Fonts** <br>
+All fonts are from [Google Fonts](https://fonts.google.com/) <br>
+    - The site's main font is **Roboto**, it was chosen for its clear and straight design.    
+    - The font of the word to guess is **Patrick Hand**, it was chosen because of its resemblance to handwriting.
 
-The wireframes were creating using Figma and can be found here:
-https://www.figma.com/file/W6byLl333Stnds9vzlbSOB/Second-milestone-project?node-id=8%3A23 
+2. **Buttons** <br>
+The buttons style is from [Bootstrap](https://getbootstrap.com/) <br>
+    - Large-call-to-action buttons are used in all modals to guide the flow of the game
+    - Each button contains a [Font Awesome](https://fontawesome.com/) icon that represents its meaning, this makes site navigation more intuitive and also makes the site's appearance more playful.
+    - The shadow under the buttons narrows when clicking, giving the illusion that the button is pushed down
 
-#### Surface
+3. **Colours** <br>
+The site uses light, pastel colors with good contrast between them. <br>
+    - Sky blue (#81DAFC) is used as default button color, it was chosen because it is a more pastel version of the bootstrap primary button. The same color is used as fallback for the background.    
+    - Bright orange (#D35400) is used to highlight the buttons when the user hovers them with the mouse, it creates a nice contrast with the idles buttons.    
+    - Yellow paper (#FDF6E3 to #fde1ab) are used to create the effect of old paper   
+
+4. **Hangman Figure** <br>
+The hangman figure was created by the author from free images with [Paint.net](https://www.getpaint.net/) <br>
+    - In the original game, a hanged man is gradually drawn each time the player chooses a wrong letter. In this version he is replaced by a flying kid "hanging" on balloons. The idea is to remain consistent with the name of the game and at the same time make the image more suitable for children.
+    - The project aims to create a fully responsive game, one of the greatest challenges in this regard has been to make the image size consistent with extremely different width/height ratio viewports. 
+
+5. **Sound Effects** <br>
+All sound effects are from [Freesound](https://freesound.org/) <br>
+    - A positive sound is played if the player chooses a correct letter, the sound style reminds the old arcade video games and contributes to creating a nostalgic atmosphere as well as to make the game more interactive.    
+    - A "Pop" sound is played if the player chooses a wrong letter, creates the illusion that one of the balloons in the image has burst.
+
+6. **Background** <br>
+The background image is from [Freepik](https://www.freepik.com/) <br>
+    - It was chosen because it looks like a painted sky and creates a good contrast with the yellow of the gameplay page.
+
+7. **Styling** <br>
+The website style is inspired by [PicFlip!](https://ajgreaves.github.io/picflip/) <br>
+    - Most buttons and containers were given black thick border and rounded corners to make them look more cartoonish    
+    - The title and the "New Record" signal are animated using [Textillate](https://textillate.js.org/)
 
 ## Features
 
