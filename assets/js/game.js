@@ -166,12 +166,12 @@
         updateTopScores: function (newScore) {
             $("#newRecord").show();
             if (localStorage.first == undefined) { localStorage.first = newScore; }
-            else if (localStorage.second == undefined) { localStorage.second = newScore; }
             else if (newScore > localStorage.first) {
                 localStorage.third = localStorage.second;
                 localStorage.second = localStorage.first;
                 localStorage.first = newScore;
             }
+            else if (localStorage.second == undefined) { localStorage.second = newScore; }
             else if (newScore > localStorage.second) {
                 localStorage.third = localStorage.second;
                 localStorage.second = newScore;
