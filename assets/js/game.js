@@ -43,15 +43,15 @@
     const failSound = new Audio("assets/audio/pop.mp3");
 
     // Other global variables
-    var wordToGuess; // The randomly drawn word
-    var output = []; // Keeps track of the letters chosen by the player, the result will be print in the homonymous ID in HTML
-    var lives = 6; // Decreases by one when the player makes a mistake
-    var startTime; // Records the game start time
-    var finishTime; // Records the game end time
-    var points = 0; // Updates based on user guesses
+    let wordToGuess; // The randomly drawn word
+    let output = []; // Keeps track of the letters chosen by the player, the result will be print in the homonymous ID in HTML
+    let lives = 6; // Decreases by one when the player makes a mistake
+    let startTime; // Records the game start time
+    let finishTime; // Records the game end time
+    let points = 0; // Updates based on user guesses
 
     // The main object containing the functions to run the game
-    var game = {
+    const game = {
         // Draw a random word from the user selected theme and initiate the game
         selectWord: {
             animals: function () {
@@ -85,9 +85,9 @@
             wordToGuess = wordToGuess.toUpperCase();
             $("#selectionModal").modal("hide");
             $("#figure").attr("src", "assets/images/6_baloon(s).png");
-            var d = new Date();
+            let d = new Date();
             startTime = d.getTime();
-            for (char of wordToGuess) {
+            for (const char of wordToGuess) {
                 if (char == " ") {
                     output.push(char);
                 } else {
@@ -101,9 +101,8 @@
         // Check if the letter chosen by the user is part of the word to be guessed
         chooseLetter: function (letter) {
             console.log(wordToGuess); //For testing purpose only
-            var error = true;
-            var i;
-            for (i = 0; i < wordToGuess.length; i++) {
+            let error = true;
+            for (let i = 0; i < wordToGuess.length; i++) {
                 if (wordToGuess[i] == letter) {
                     output[i] = letter;
                     error = false;
@@ -145,10 +144,10 @@
         over: function () {
             // Prepare the modal 
             $("#solution").html(`<h4>The word to guess was <b>` + wordToGuess + `</b>`);
-            var d = new Date();
+            let d = new Date();
             finishTime = d.getTime();
-            var seconds = Math.round((finishTime - startTime) / 1000);
-            var score = points - seconds;
+            let seconds = Math.round((finishTime - startTime) / 1000);
+            let score = points - seconds;
             if (score < 0) { score = 0; }
             $("#score").text(`Score: ` + score);
             $("#time").text(`Time: ` + seconds + `s`);
