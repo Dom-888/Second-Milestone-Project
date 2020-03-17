@@ -100,7 +100,6 @@
 
         // Check if the letter chosen by the user is part of the word to be guessed
         chooseLetter: function (letter) {
-            console.log(wordToGuess); //For testing purpose only
             let error = true;
             for (let i = 0; i < wordToGuess.length; i++) {
                 if (wordToGuess[i] == letter) {
