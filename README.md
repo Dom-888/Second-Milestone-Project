@@ -25,11 +25,11 @@ As a player aged between 6 to 99 years old I want to:
 All fonts are from [Google Fonts](https://fonts.google.com/).
     - The site's main font is **Roboto**, it was chosen for its clear and straight design.   
     - The font of the word to guess is **Patrick Hand**, it was chosen because of its resemblance to handwriting.
-    - The font used in the on-screen keyboard is **Helvetica**, as it is a font commonly used in real keyboards.
+    - The font used in the on-screen keyboard is **Helvetica**, as it is commonly used in real keyboards.
 
 1.  **Buttons**<br>
 The buttons style is from [Bootstrap](https://getbootstrap.com/).
-    - Large-call-to-action buttons are used in all modals to guide the flow of the game.
+    - Large call-to-action buttons are used in all modals to guide the flow of the game.
     - Each modal button contains a [Font Awesome](https://fontawesome.com/) icon that represents its meaning, this makes site navigation more intuitive and also makes the site's appearance more playful.
     - The on-screen keyboard is designed to look like a real keyboard.
     - The shadow under the buttons narrows when clicking, giving the illusion that the button is pushed down.
@@ -92,12 +92,10 @@ In addition, you may also use this section to discuss plans for additional featu
 
 - **Frameworks**
     - [Bootstrap](https://getbootstrap.com/) was used extensively to create the responsive design, in particular the grid and the modal classes.
-    - [Jasmine](https://jasmine.github.io/) was used to automatically test the JavaScript code.
 
 - **Plugins**
     - [Textillate](https://textillate.js.org/) was used to animate the title and the "New Record" signal.
     - [Lettering.js](http://letteringjs.com/) was added as dependency of Textillate
-    - [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery) was added to allow Jasmine to test jQuery code.
 
 - **Toolkits**
     - [Font Awesome](https://fontawesome.com/) was used to create button icons.
@@ -112,7 +110,7 @@ In addition, you may also use this section to discuss plans for additional featu
     - [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) was used to test responsiveness and quickly debug code.
     - [HTML Validator](https://validator.w3.org/) was used to test the HTML code.
     - [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to test the CSS code.
-    - [JSHint analysis](https://jigsaw.w3.org/css-validator/) was used to test the JavaScript code.
+    - [JSHint analysis](https://jshint.com/) was used to test the JavaScript code.
     - [Autoprefixer](https://autoprefixer.github.io/) was used to add prefixes in the CSS for cross-browser support.
     - [Figma](https://www.figma.com/) was used for wireframing
     - [Online Audio Converter](https://online-audio-converter.com/it/) was used for simple sounds manipulation.
