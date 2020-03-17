@@ -8,21 +8,21 @@
     }
 
     // Apply textillate effects
-    $('#title').textillate({
+    $("#title").textillate({
         in: {
-            effect: 'tada',
+            effect: "tada",
             delay: 100,
         },
         out: {
-            effect: 'tada',
+            effect: "tada",
             delay: 100,
             reverse: true
         },
         loop: true
     });
-    $('#newRecord').textillate({
+    $("#newRecord").textillate({
         in: {
-            effect: 'bounceInDown',
+            effect: "bounceInDown",
             delay: 80
         },
     });
@@ -166,7 +166,7 @@
             $("#newRecord").show();
             if (localStorage.first == undefined) { localStorage.first = newScore; }
             else if (newScore > localStorage.first) {
-                if (localStorage.second != undefined) { localStorage.third = localStorage.second }; //Prevents the "undefined" string from being assigned to localStorage.third 
+                if (localStorage.second != undefined) { localStorage.third = localStorage.second; } //Prevents the "undefined" string from being assigned to localStorage.third 
                 localStorage.second = localStorage.first;
                 localStorage.first = newScore;
             }
