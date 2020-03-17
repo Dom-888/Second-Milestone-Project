@@ -2,7 +2,7 @@
 
 This is a digital version of the classic paper-and-pencil game, restyled to be more child-friendly.
 
-pic from http://ami.responsivedesign.is/
+!["Responsive Representation"](assets/images/demo.png "Responsive Representation")
 
 ## UX
 
@@ -114,6 +114,7 @@ In addition, you may also use this section to discuss plans for additional featu
     - [Autoprefixer](https://autoprefixer.github.io/) was used to add prefixes in the CSS for cross-browser support.
     - [Figma](https://www.figma.com/) was used for wireframing
     - [Online Audio Converter](https://online-audio-converter.com/it/) was used for simple sounds manipulation.
+    - [Responsive Design](http://ami.responsivedesign.is/) was used to take the screenshot at the beginning of this document
 
 - **Software**
     - [Paint.net](https://www.getpaint.net/) was used for simple images manipulation.
