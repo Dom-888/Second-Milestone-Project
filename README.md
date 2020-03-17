@@ -176,7 +176,7 @@ In case you want to pull the code from my Github repository:
 - The background image was created by **Hello-Pixel** and was downloaded from [Freepik](https://www.freepik.com/).
 - The "Pop" sound was created by **Greenvwbeetle** and was downloaded from [Freesound](https://freesound.org/).
 - The "Success" sound was created by **Shinephoenixsto** and was downloaded from [Freesound](https://freesound.org/).
-- The original image of the kid was taken from [Paintingvalley](https://paintingvalley.com/), the author is unknown.
+- The original image of the kid was downloaded from [Paintingvalley](https://paintingvalley.com/), the author is unknown.
 
 ### Acknowledgements
 
