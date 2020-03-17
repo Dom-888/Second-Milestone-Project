@@ -8,12 +8,12 @@ pic from http://ami.responsivedesign.is/
 
 The goal of the project was to create a game that is both nostalgic for adults and educational for children, but without the questionable taste of the original one. 
  
-#### User Stories
+### User Stories
 
 As a player aged between 6 to 99 years old I want to:
 
-1. The ability to intuitively understand how to play the game.
-2. The ability to choose different themes in which to play.
+1. The ability to intuitively understand how to play the game.  
+2. The ability to choose different themes in which to play.
 3. A combination of visual and audio feedback after each move to make the game more engaging.
 4. A mute button to remove the sounds effect, in case they become annoying.
 5. The ability to see my top scores, so I can try to beat them.
@@ -21,41 +21,47 @@ As a player aged between 6 to 99 years old I want to:
 
 ### Design Choices
 
-1. **Fonts** <br>
-All fonts are from [Google Fonts](https://fonts.google.com/) <br>
-    - The site's main font is **Roboto**, it was chosen for its clear and straight design.    
-    - The font of the word to guess is **Patrick Hand**, it was chosen because of its resemblance to handwriting.
+1.  **Fonts**<br>
+All fonts are from [Google Fonts](https://fonts.google.com/).
+    - The site's main font is **Roboto**, it was chosen for its clear and straight design.   
+    - The font of the word to guess is **Patrick Hand**, it was chosen because of its resemblance to handwriting.
+    - The font used in the on-screen keyboard is **Helvetica**, as it is a font commonly used in real keyboards.
 
-2. **Buttons** <br>
-The buttons style is from [Bootstrap](https://getbootstrap.com/) <br>
-    - Large-call-to-action buttons are used in all modals to guide the flow of the game
-    - Each button contains a [Font Awesome](https://fontawesome.com/) icon that represents its meaning, this makes site navigation more intuitive and also makes the site's appearance more playful.
-    - The shadow under the buttons narrows when clicking, giving the illusion that the button is pushed down
+1.  **Buttons**<br>
+The buttons style is from [Bootstrap](https://getbootstrap.com/).
+    - Large-call-to-action buttons are used in all modals to guide the flow of the game.
+    - Each modal button contains a [Font Awesome](https://fontawesome.com/) icon that represents its meaning, this makes site navigation more intuitive and also makes the site's appearance more playful.
+    - The on-screen keyboard is designed to look like a real keyboard.
+    - The shadow under the buttons narrows when clicking, giving the illusion that the button is pushed down.
 
-3. **Colours** <br>
-The site uses light, pastel colors with good contrast between them. <br>
-    - Sky blue (#81DAFC) is used as default button color, it was chosen because it is a more pastel version of the bootstrap primary button. The same color is used as fallback for the background.    
-    - Bright orange (#D35400) is used to highlight the buttons when the user hovers them with the mouse, it creates a nice contrast with the idles buttons.    
-    - Yellow paper (#FDF6E3 to #fde1ab) are used to create the effect of old paper   
+1.  **Colours** <br>
+The site uses light, pastel colors with good contrast between them.
+    - Sky blue (#81DAFC) is used as default button color, it was chosen because it is a more pastel version of the bootstrap primary button. The same color is used as fallback for the background.    
+    - Bright orange (#D35400) is used to highlight the buttons when the user hovers them with the mouse, it creates a nice contrast with the idles buttons.    
+    - Yellow paper (#FDF6E3 to #fde1ab) are used to create the effect of old paper, to give the feeling of the paper-and-pencil game.
 
-4. **Hangman Figure** <br>
-The hangman figure was created by the author from free images with [Paint.net](https://www.getpaint.net/) <br>
-    - In the original game, a hanged man is gradually drawn each time the player chooses a wrong letter. In this version he is replaced by a flying kid "hanging" on balloons. The idea is to remain consistent with the name of the game and at the same time make the image more suitable for children.
+1.  **Hangman Figure** <br>
+The hangman figure was created by the author from free images with [Paint.net](https://www.getpaint.net/).
+    - In the original game, a hanged man is gradually drawn each time the player chooses a wrong letter. In this version he is replaced by a flying kid "hanging" on balloons. The idea is to remain consistent with the name of the game and at the same time make the image more suitable for children.
     - The project aims to create a fully responsive game, one of the greatest challenges in this regard has been to make the image size consistent with extremely different width/height ratio viewports. 
 
-5. **Sound Effects** <br>
-All sound effects are from [Freesound](https://freesound.org/) <br>
-    - A positive sound is played if the player chooses a correct letter, the sound style reminds the old arcade video games and contributes to creating a nostalgic atmosphere as well as to make the game more interactive.    
-    - A "Pop" sound is played if the player chooses a wrong letter, creates the illusion that one of the balloons in the image has burst.
+1.  **Sound Effects** <br>
+All sound effects are from [Freesound](https://freesound.org/).
+    - A positive sound is played if the player chooses a correct letter, the sound style reminds the old arcade video games and contributes to creating a nostalgic atmosphere as well as to make the game more interactive.    
+    - A "Pop" sound is played if the player chooses a wrong letter, creates the illusion that one of the balloons in the image has burst.
 
-6. **Background** <br>
-The background image is from [Freepik](https://www.freepik.com/) <br>
-    - It was chosen because it looks like a painted sky and creates a good contrast with the yellow of the gameplay page.
+1.  **Background** <br>
+The background image is from [Freepik](https://www.freepik.com/).
+    - It was chosen because it looks like a painted sky and creates a good contrast with the yellow of the gameplay page.
 
-7. **Styling** <br>
-The website style is inspired by [PicFlip!](https://ajgreaves.github.io/picflip/) <br>
-    - Most buttons and containers were given black thick border and rounded corners to make them look more cartoonish    
-    - The title and the "New Record" signal are animated using [Textillate](https://textillate.js.org/)
+1.  **Styling** <br>
+The website style is inspired by [PicFlip!](https://ajgreaves.github.io/picflip/).
+    - Most buttons and containers were given black thick border and rounded corners to make them look more cartoonish.
+    - The title and the "New Record" signal are animated using [Textillate](https://textillate.js.org/).
+
+### Wireframes
+
+The wireframes were creating using Figma and can be found [here](https://www.figma.com/file/W6byLl333Stnds9vzlbSOB/Second-milestone-project?node-id=8%3A23).
 
 ## Features
 
@@ -74,9 +80,7 @@ In addition, you may also use this section to discuss plans for additional featu
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
-- **Programming languages**
+- **Languages**
     - [HTMLS](https://devdocs.io/html/) 
     - [CSS3](https://devdocs.io/css/) 
     - [JavaScript](https://devdocs.io/javascript/) 
@@ -84,14 +88,19 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - **Libraries**
     - [JQuery](https://jquery.com) was used to simplify DOM manipulation.
     - [Google Fonts](https://fonts.google.com/) was used to import the fonts used in the website.
-    - [Font Awesome](https://fontawesome.com/) was used to create button icons.
-
-- **Plugins**
-    - [Textillate](https://textillate.js.org/) was used to animate the title and the "New Record" signal.
+    - [Animate.css](https://daneden.github.io/animate.css/) was added as dependency of Textillate
 
 - **Frameworks**
     - [Bootstrap](https://getbootstrap.com/) was used extensively to create the responsive design, in particular the grid and the modal classes.
     - [Jasmine](https://jasmine.github.io/) was used to automatically test the JavaScript code.
+
+- **Plugins**
+    - [Textillate](https://textillate.js.org/) was used to animate the title and the "New Record" signal.
+    - [Lettering.js](http://letteringjs.com/) was added as dependency of Textillate
+    - [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery) was added to allow Jasmine to test jQuery code.
+
+- **Toolkits**
+    - [Font Awesome](https://fontawesome.com/) was used to create button icons.
 
 - **API**
     - [Web Storage](https://www.w3schools.com/html/html5_webstorage.asp) was used to save scores in the leaderbord.
@@ -99,7 +108,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - **Services**
     - [GitPod](https://www.gitpod.io/) was the main IDE in which the project was developed.
     - [Git](https://git-scm.com/) was used for version control during the development process.
-    - [GitHub](https://github.com/) was used for remote repository hosting.
+    - [GitHub](https://github.com/) was used to host the project in a remote repository.
     - [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) was used to test responsiveness and quickly debug code.
     - [HTML Validator](https://validator.w3.org/) was used to test the HTML code.
     - [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to test the CSS code.
@@ -135,24 +144,48 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+This website was deployed on GitHub from the master branch, it can be accessed from the following Url: https://github.com/Dom-888/Second-Milestone-Project
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
+The exact procedure is as follows:
+1. Log in to Github
+2. Select the repository you want to deploy
+3. Under the repository name, click **Settings**.
+4. Under "GitHub Pages", use the Source drop-down menu and select the master branch.
+5. The message "Your site is ready to be published at *Link* will 
+   appear under Github Pages.
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
+In case you want to pull the code from my Github repository:
+1. Log in to Github,
+2. Navigate to the main page of the repository or click https://github.com/Dom-888/Second-Milestone-Project
+3. Under the repository name, click **Clone or download**.
+4. To clone the repository using HTTPS, under "Clone with HTTPS", click the clipboard icon. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click **Use SSH**, then click the clipboard icon.
+5. Open Git Bash.
+6. Change the current working directory to the location where you want the cloned directory to be made.
+7. Type git `clone`, and then paste the URL you copied in Step 3.
+8. Press **Enter**. Your local clone will be created.
 
 
 ## Credits
 
-### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+### Code
+
+- The code to center the page vertically is from [this](https://medium.com/wdstack/bootstrap-4-vertical-center-1211448a2eff) article.
 
 ### Media
-- The photos used in this site were obtained from ...
+
+- The background image was created by **Hello-Pixel** and was downloaded from [Freepik](https://www.freepik.com/).
+- The "Pop" sound was created by **Greenvwbeetle** and was downloaded from [Freesound](https://freesound.org/).
+- The "Success" sound was created by **Shinephoenixsto** and was downloaded from [Freesound](https://freesound.org/).
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- I received assistance, feedback and encouragement from my mentor [Seun Owonikoko](https://github.com/seunkoko).
+- I received help and suggestions from [Code Institute](https://codeinstitute.net/) tutors.
+- The project code has been reviewed by the [Code Institute](https://codeinstitute.net/) Slack community.
+- This project takes inspiration from [PicFlip!](https://ajgreaves.github.io/picflip/) by [Anna Greaves](https://github.com/AJGreaves).
+
+<br>
+
+#### Disclaimer
+
+The content of this Website is provided for educational purposes only.
