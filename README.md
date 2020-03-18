@@ -72,28 +72,28 @@ The website use a one page design with modals that are shown at appropriate time
 
 1. **Landing Modal**
 Appears as soon as the user enters the site.
-	- _Ainmated Title_: A subtle animation distinguishes the title from the other headers.
+	- _Ainmated Title_: A subtle animation distinguishes the title from other headers.
 	- _Introduction_: Show the user a brief description of the game.
 	- _Play Button_: Allows the user to start a new game.
 	- _Top Scores_: Allows the user to see his previous three top scores.
  
  2. **Selection Modal**
 Allows the user to choose the category in which to play.
-	- _Theme Buttons_: Allows the user to choose from 5 themes in which to play. Alternatively, the "all" button combines all the themes together.
+	- _Theme Buttons_: Allows the user to choose from 5 themes in which to play. Alternatively, the "All" button combines all the themes together.
 
 3. **Gameplay Page**
 The page where the game takes place.
-	- _Home Button_: Allows the user to return to the main screen
-	- _Audio-Toggle Button_: Allows the user to enable / disable sound effects
+	- _Home Button_: Allows the user to return to the Landing Modal.
+	- _Audio-Toggle Button_: Allows the user to enable / disable sound effects.
 	- _Hangman Figure_: It's the graphic component of the game as well as the main visual feedback. Occupies the top third of the page
-	- _Word to Guess_: Initially hidden, but gradually revealed as the user guesses the letters. Is centered on the page as it represents the goal of the game. 
+	- _Word to Guess_: Initially hidden, but gradually revealed as the user guesses the letters. It is the element in which the user's attention is focused and therefore occupies the center of the page.
 	- _On-screen Keyboard_: It occupies the lower third of the page, a familiar position when playing on a mobile phone.
 
 4. **Results Modal**
 Appears at the end of the game and shows the results.
-	- _Game Outcome_: Blablabla blabla blabla blablabla
-	- _Continue Button_: Blablabla blabla blabla blablabla
-	- _Game Score_: Blablabla blabla blabla blablabla
+	- _Game Outcome_: Shows two possible messages, one for victory and one for defeat, and in the latter case allows the user to know the word to guess.
+	- _Continue Button_: Allows the user to return to the Landing Modal. 
+	- _Game Score_: Show the score and time of the game just played. An animated signal informs the user if the score is a new record
 	
 ### Features Left to Implement
 
@@ -106,6 +106,8 @@ Appears at the end of the game and shows the results.
 ### Remouved Features
 
 1. **Tutorial Page**
+
+2. **Difficulty Levels**
 
 ## Technologies Used
 
