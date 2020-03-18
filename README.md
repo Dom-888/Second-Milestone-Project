@@ -32,7 +32,7 @@ All fonts are from [Google Fonts](https://fonts.google.com/).
 The buttons style is from [Bootstrap](https://getbootstrap.com/).
     - Large call-to-action buttons are used in all modals to guide the flow of the game.
     - Each modal button contains a [Font Awesome](https://fontawesome.com/) icon that represents its meaning, this makes site navigation more intuitive and also makes the site's appearance more playful.
-    - The on-screen keyboard is designed to look like a real keyboard.
+    - The on-screen keyboard is designed to look like an android keyboard with dark theme
     - The shadow under the buttons narrows when clicking, giving the illusion that the button is pushed down.
 
 1.  **Colours** <br>
@@ -66,18 +66,34 @@ The wireframes were creating using Figma and can be found [here](https://www.fig
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+The website use a one page design with modals that are shown at appropriate times based on user interaction.
  
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+1. **Landing Modal**
+Appears as soon as the user enters the site.
+	- _Ainmated Title_: Blablabla blabla blabla blablabla
+	- _Introduction_: Blablabla blabla blabla blablabla
+	- _Play Button_: Blablabla blabla blabla blablabla
+	- _Top Scores_: Blablabla blabla blabla blablabla
+ 
+ 2. **Selection Modal**
+Allows the user to choose the category in which to play.
+	- _Theme Buttons_: Blablabla blabla blabla blablabla
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+3. **Gameplay Page**
+The page where the game takes place.
+	- _Home Button_: Allows the user to return to the main screen
+	- _Audio-Toggle Button_: Allows the user to enable / disable sound effects
+	- _Hangman Figure_: It is the graphic component of the game as well as the main visual feedback. Occupies the top third of the page
+	- _Word to Guess_: Initially hidden, but gradually revealed as the user guesses the letters. Is centered on the page as it represents the goal of the game. 
+	- _On-screen Keyboard_: It occupies the lower third of the page, a familiar position when playing on a mobile phone.
 
-### Features Left to Implement
-- Another feature idea
+4. **Results Modal**
+Shows the results of the game just played.
+	- _Game Outcome_: Blablabla blabla blabla blablabla
+	- _Continue Button_: Blablabla blabla blabla blablabla
+	- _Game Score_: Blablabla blabla blabla blablabla
 
 ## Technologies Used
 
