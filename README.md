@@ -1,4 +1,5 @@
 
+
 # The Hangaman Game
 
 This is a digital version of the classic paper-and-pencil game, restyled to be more child-friendly.
@@ -91,7 +92,7 @@ The page where the game takes place.
 
 4. **Results Modal**
 Appears at the end of the game and shows the results.
-	- _Game Outcome_: Shows two possible messages, one for victory and one for defeat, and in the latter case allows the user to know the word to guess.
+	- _Game Outcome_: Shows two possible messages, one for victory and one for defeat, and in the latter case lets the player know which was the word to guess.
 	- _Continue Button_: Allows the user to return to the Landing Modal. 
 	- _Game Score_: Show the score and time of the game just played. An animated signal informs the user if the score is a new record
 	
@@ -222,3 +223,4 @@ In case you want to pull the code from my Github repository:
 #### Disclaimer
 
 The content of this Website is provided for educational purposes only.
+
