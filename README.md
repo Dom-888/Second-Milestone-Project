@@ -98,16 +98,18 @@ Appears at the end of the game and shows the results.
 ### Features Left to Implement
 
 1. **Global Leaderboard**
+At present the game saves the player's best scores in the browser. The next step is to create a global leaderbord with the best scores of all players saved on a server. To do this I need to develop back-end skills not yet covered in the course.
 
 2. **Additional Words to Guess**
+Currently in the game there are 165 words to guess contained in arrays. It's possible to increase game longevity by increasing the number of words and storing them in JSON files, more suitable than arrays to contain large quantities of elements.
 
 3. **Multiplayer**
+It would be interesting to introduce a two player mode, where one chooses a word and the other has to guess it.
 
 ### Remouved Features
 
-1. **Tutorial Page**
-
-2. **Difficulty Levels**
+1. **Tutorial**
+In the wireframes, the project included a detailed description of how to play, I decided to remove it during development becouse people don't like tutorials and walls of text are even worse. On the other hand I tried to make learning the game as simple and intuitive as possible.
 
 ## Technologies Used
 
@@ -206,7 +208,7 @@ In case you want to pull the code from my Github repository:
 - The background image was created by **Hello-Pixel** and was downloaded from [Freepik](https://www.freepik.com/).
 - The "Pop" sound was created by **Greenvwbeetle** and was downloaded from [Freesound](https://freesound.org/).
 - The "Success" sound was created by **Shinephoenixsto** and was downloaded from [Freesound](https://freesound.org/).
-- The original image of the kid was downloaded from [Paintingvalley](https://paintingvalley.com/), the author is unknown.
+- The image of the kid was obtained from [this](https://paintingvalley.com/family-drawing-stick-figures#family-drawing-stick-figures-2.jpg) image, the author is unknown.
 
 ### Acknowledgements
 
