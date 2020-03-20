@@ -23,43 +23,45 @@ As a player aged between 6 to 99 years old I want to:
 
 ### Design Choices
 
+### Design Choices
+
 1.  **Fonts**
 All fonts are from [Google Fonts](https://fonts.google.com/).
-    - The site's main font is **Roboto**, it was chosen for its clear and straight design.   
-    - The font of the word to guess is **Patrick Hand**, it was chosen because of its resemblance to handwriting.
-    - The font used in the on-screen keyboard is **Helvetica**, as it is commonly used in real keyboards.
+    - _Roboto_: Site main font, it was chosen for its clear and straight design.   
+    - _Patrick Hand_: Used in the word to guess, it was chosen because of its resemblance to handwriting.
+    - _Helvetica_: Chosen for the on-screen keyboard is, as it is commonly used in real keyboards.
 
-1.  **Buttons**
+2.  **Buttons**
 The buttons style is from [Bootstrap](https://getbootstrap.com/).
-    - Large call-to-action buttons are used in all modals to guide the flow of the game.
-    - Each modal button contains a [Font Awesome](https://fontawesome.com/) icon that represents its meaning, this makes site navigation more intuitive and also makes the site's appearance more playful.
-    - The on-screen keyboard is designed to look like an android keyboard with dark theme
-    - The shadow under the buttons narrows when clicking, giving the illusion that the button is pushed down.
+	- _Modals Buttons_: Each modals use large call-to-action buttons to guide the flow of the game, each of the buttons contains a [Font Awesome](https://fontawesome.com/) icon that represents its meaning, this makes site navigation more intuitive and also makes the site's appearance more playful.
+	- _Corners Buttons_: The buttons at the top corners of the page have a more subtle animation than the others to not distract the player, but are consistent with the style of other button.
+    - _On-Screen Keyboard_: Designed to look like an android keyboard with dark theme.
 
-1.  **Colours** 
+3.  **Colours** 
 The site uses light, pastel colors with good contrast between them.
-    - Sky blue (#81DAFC) is used as default button color, it was chosen because it is a more pastel version of the bootstrap primary button. The same color is used as fallback for the background.    
-    - Bright orange (#D35400) is used to highlight the buttons when the user hovers them with the mouse, it creates a nice contrast with the idles buttons.    
-    - Yellow paper (#FDF6E3 to #fde1ab) are used to create the effect of old paper, to give the feeling of the paper-and-pencil game.
+    - _Sky blue (#81DAFC)_: Used as default button color, it was chosen because it is a more pastel version of the bootstrap primary button. The same color is used as fallback for the background.    
+    - _Bright orange (#D35400)_: Used to highlight the buttons when the user hovers them with the mouse, it creates a nice contrast with the idles buttons.    
+    - _Yellow paper (#FDF6E3 to #FDELAB)_: are used to create the effect of old paper and give the feeling of the paper-and-pencil game.
 
-1.  **Hangman Figure** 
-The hangman figure was created by the author from free images with [Paint.net](https://www.getpaint.net/).
-    - In the original game, a hanged man is gradually drawn each time the player chooses a wrong letter. In this version he is replaced by a flying kid "hanging" on balloons. The idea is to remain consistent with the name of the game and at the same time make the image more suitable for children.
-    - The project aims to create a fully responsive game, one of the greatest challenges in this regard has been to make the image size consistent with extremely different width/height ratio viewports. 
+4.  **Images** 
+The images used on the site were chosen with the goal of creating a light and cartoonesque atmosphere.
+    - _Hangman Figure_: In the original game, a hanged man is gradually drawn each time the player chooses a wrong letter. In this version he is replaced by a flying kid "hanging" on balloons. The idea is to remain consistent with the name of the game and at the same time make the image more suitable for children.
+	- _Background Image_: Chosen for its resemblance to a painted sky, creates a good contrast with the yellow of the gameplay page.
 
-1.  **Sound Effects** 
+5.  **Sound Effects** 
 All sound effects are from [Freesound](https://freesound.org/).
-    - A positive sound is played if the player chooses a correct letter, the sound style reminds the old arcade video games and contributes to creating a nostalgic atmosphere as well as to make the game more interactive.    
-    - A "Pop" sound is played if the player chooses a wrong letter, creates the illusion that one of the balloons in the image has burst.
+    - _Success sound_: Played if the player chooses a correct letter, the sound style reminds the old arcade video games and contributes to creating a nostalgic atmosphere as well as to make the game more interactive.    
+    - _Pop sound_: Played if the player chooses a wrong letter, creates the illusion that one of the balloons in the image has burst.
 
-1.  **Background** 
-The background image is from [Freepik](https://www.freepik.com/).
-    - It was chosen because it looks like a painted sky and creates a good contrast with the yellow of the gameplay page.
+6.  **Animated Text** 
+The text animation is achived with [Textillate](https://textillate.js.org/)
+	- _Title_: A subtle animation distinguishes the title from other headers.
+	- _"New Record" message_: A flashy red message appears each time the player gets a new record, creating a sense of accomplishment.
 
-1.  **Styling** 
+7.  **Styling** 
 The website style is inspired by [PicFlip!](https://ajgreaves.github.io/picflip/)
-    - Most buttons and containers were given black thick border and rounded corners to make them look more cartoonish.
-    - The title and the "New Record" signal are animated using [Textillate](https://textillate.js.org/).
+    - _Cartoonish Borders_: Most buttons and containers were given black thick border and rounded corners to make them look more carton-like.
+	- _Buttons Shadow_: Most buttons have sharp, vertical shadoe that narrows when clicking, giving the illusion that the button is pushed down.
 
 ### Wireframes
 
@@ -73,7 +75,6 @@ The website use a one page design with modals that are shown at appropriate time
 
 1. **Landing Modal**
 Appears as soon as the user enters the site.
-	- _Ainmated Title_: A subtle animation distinguishes the title from other headers.
 	- _Introduction_: Show the user a brief description of the game.
 	- _Play Button_: Allows the user to start a new game.
 	- _Top Scores_: Allows the user to see his previous three top scores.
@@ -144,7 +145,7 @@ In the wireframes, the project included a detailed description of how to play, I
     - [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) was used to test responsiveness and quickly debug code.
     - [HTML Validator](https://validator.w3.org/) was used to test the HTML code.
     - [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to test the CSS code.
-    - [JSHint analysis](https://jshint.com/) was used to test the JavaScript code.
+    - [JSHint](https://jshint.com/) was used to test the JavaScript code.
     - [Autoprefixer](https://autoprefixer.github.io/) was used to add prefixes in the CSS for cross-browser support.
     - [Figma](https://www.figma.com/) was used for wireframing
     - [Online Audio Converter](https://online-audio-converter.com/it/) was used for simple sounds manipulation.
@@ -157,24 +158,128 @@ In the wireframes, the project included a detailed description of how to play, I
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+## Manual testing
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+### Tested Devices
+This website has been successfully tested with the following devices
+```
+| -----------|---------------------------- |------------------------------|
+| Type       | Device                      | Browsers                     |
+| -----------|---------------------------- |------------------------------|
+| Laptop     | Asus FX753VD                | Chrome, Firefox, Edge, Opera |
+| Smartphone | Lenovo Moto G5S Plus        | Chrome, Firefox              |
+| Smartphone | Samsung Galaxy note 10 plus | Chrome                       |
+| Smartphone | Samsung Galaxy s9           | Chrome                       |
+| Smartphone | Samsung Galaxy a50          | Firefox Focus                |
+| Smartphone | Asus ZenFone 4 max          | Chrome                       |
+| Smartphone | Apple iPhone 7              | Safari                       |
+| -----------|---------------------------- |------------------------------|
+```
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+###  Laptop Testing
+All the following steps was repeated in 2 viewport sizes: 1920px and 958px.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+1. **Landing Modal**
+	- Open the game in a new tab and verify that the Landing Modal is automatically launched.
+	- Verify that the modal is displayed correctly in the center of the screen.
+	- Verify that the title is animated correctly.
+	- Press the ESC key and click outside the modal to verify that it remains open.
+	- Verify that the Top Scores are shown in the correct order. 
+	- Hover the mouse on the Play Button to verify that the hover animation works properly.
+	- Click on the Play Button and verify that the Landing Modal is closed while the Selection Modal is opened.
+	
+2. **Selection Modal**
+	- Verify that the modal is displayed correctly in the center of the screen.
+	- Press the ESC key and click outside the modal to verify that it remains open.
+	- Hover the mouse on the Theme Buttons to verify that the hover animation works properly.
+	- Click on the Animals Button and verify that the Selection Modal is closed while the game is launched and that the word to guess belongs to the "Animals" array.
+	- Click on the Cities Button and verify that the Selection Modal is closed while the game is launched and that the word to guess belongs to the "Cities" array.
+	- Click on the Movies Button and verify that the Selection Modal is closed while the game is launched and that the word to guess belongs to the "Movies" array.
+	- Click on the Sports Button and verify that the Selection Modal is closed while the game is launched and that the word to guess belongs to the "Sports" array.
+	- Click on the Jobs Button and verify that the Selection Modal is closed while the game is launched and that the word to guess belongs to the "Jobs" array.
+	- Click on the All Button and verify that the Selection Modal is closed while the game is launched, repeat a number of times to verify that the word to guess can be selected from each array.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+3. **Gameplay Page**
+	- Verify that the game container is displayed correctly in the center of the screen.
+	- Verify that all elements are displayed correctly in their proper position.
+	- Hover the mouse on the Home Button and the Sound-toggle Button to verify that the hover animation works properly.
+	- Click on the Home Button and verify that the page is reloaded.
+	- Click on the Sound-toggle Button and verify that the sound effects are removed, click again and verify that the sound effects are restored.
+	- Click on the letters of the on-screen keyboard to verify that:
+		- The click animation is displayed correctly.
+		- If the chosen letter is part of the word to guess, it replaces the underscores in the center of the screen at all appropriate locations.
+		- If the chosen letter is part of the word to guess, a success sound is played.
+		- If the chosen letter is not part of the word to guess, the Hangman Figure updates by losing a balloon.
+		- If the chosen letter is part of the word to guess, a "pop" sound is played.
+		- The results modal is displayed if the chosen letter completes the word to guess.
+		- The results modal is displayed if the chosen letter is not part of the word and all the balloons are burst.
+		- The key becomes inactive after being clicked once.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+4. **Results Modal**
+	- Verify that the modal is displayed correctly in the center of the screen.
+	- Press the ESC key and click outside the modal to verify that it remains open.
+	- Verify that the "Well Done" and "You lost .." messages are displayed when appropriate.
+	- Verify that score and time are displayed correctly.
+	- Verify that the "new record" message is displayed at the appropriate time and animated correctly.
+	- Hover the mouse on the Continue Button to verify that the hover animation works properly.
+	- Click on the Continue Button and verify that the Results Modal is closed while the Landing Modal is opened.
 
+5. **New Game**
+	- Verify that any new records are added to the Top Scores in the proper positions.
+	- Verify that the Hangman Figure is resetted.
+	- Verify that the word to guess is changed.
+	- Verify that all keys of the on-screen keyboard are active again.
+
+###  Smartphone Testing
+
+1. **Landing Modal**
+	- Open the game in a new tab and verify that the Landing Modal is automatically launched.
+	- Verify that the modal is displayed correctly in the center of the screen.
+	- Verify that the title is animated correctly.
+	- Tap outside the modal to verify that it remains open.
+	- Verify that the Top Scores are shown in the correct order. 
+	- Tap on the Play Button and verify that the Landing Modal is closed while the Selection Modal is opened.
+	
+2. **Selection Modal**
+	- Verify that the modal is displayed correctly in the center of the screen.
+	- Tap outside the modal to verify that it remains open.
+	- Tap on the Animals Button and verify that the Selection Modal is closed while the game is launched and that the word to guess belongs to the "Animals" array.
+	- Tap on the Cities Button and verify that the Selection Modal is closed while the game is launched and that the word to guess belongs to the "Cities" array.
+	- Tap on the Movies Button and verify that the Selection Modal is closed while the game is launched and that the word to guess belongs to the "Movies" array.
+	- Tap on the Sports Button and verify that the Selection Modal is closed while the game is launched and that the word to guess belongs to the "Sports" array.
+	- Tap on the Jobs Button and verify that the Selection Modal is closed while the game is launched and that the word to guess belongs to the "Jobs" array.
+	- Tap on the All Button and verify that the Selection Modal is closed while the game is launched, repeat a number of times to verify that the word to guess can be selected from each array.
+
+3. **Gameplay Page**
+	- Verify that the game container is displayed correctly in the center of the screen.
+	- Verify that all elements are displayed correctly in their proper position.
+	- Tap on the Home Button and verify that the page is reloaded.
+	- Tap on the Sound-toggle Button and verify that the sound effects are removed, tap again and verify that the sound effects are restored.
+	- Tap on the letters of the on-screen keyboard to verify that:
+		- The tap animation is displayed correctly.
+		- If the chosen letter is part of the word to guess, it replaces the underscores in the center of the screen at all appropriate locations.
+		- If the chosen letter is part of the word to guess, a success sound is played.
+		- If the chosen letter is not part of the word to guess, the Hangman Figure updates by losing a balloon.
+		- If the chosen letter is part of the word to guess, a "pop" sound is played.
+		- The results modal is displayed if the chosen letter completes the word to guess.
+		- The results modal is displayed if the chosen letter is not part of the word and all the balloons are burst.
+		- The key becomes inactive after being tapped once.
+
+4. **Results Modal**
+	- Verify that the modal is displayed correctly in the center of the screen.
+	- Tap outside the modal to verify that it remains open.
+	- Verify that the "Well Done" and "You lost .." messages are displayed when appropriate.
+	- Verify that score and time are displayed correctly.
+	- Verify that the "new record" message is displayed at the appropriate time and animated correctly.
+	- Tap on the Continue Button and verify that the Results Modal is closed while the Landing Modal is opened.
+
+5. **New Game**
+	- Verify that any new records are added to the Top Scores in the proper positions.
+	- Verify that the Hangman Figure is resetted.
+	- Verify that the word to guess is changed.
+	- Verify that all keys of the on-screen keyboard are active again.
+	
 ## Deployment
 
 This website was deployed on GitHub from the master branch, it can be accessed from the following Url: https://github.com/Dom-888/Second-Milestone-Project
@@ -209,7 +314,7 @@ In case you want to pull the code from my Github repository:
 - The background image was created by **Hello-Pixel** and was downloaded from [Freepik](https://www.freepik.com/).
 - The "Pop" sound was created by **Greenvwbeetle** and was downloaded from [Freesound](https://freesound.org/).
 - The "Success" sound was created by **Shinephoenixsto** and was downloaded from [Freesound](https://freesound.org/).
-- The image of the kid was obtained from [this](https://paintingvalley.com/family-drawing-stick-figures#family-drawing-stick-figures-2.jpg) image, the author is unknown.
+- The image of the kid was obtained from [this](https://paintingvalley.com/family-drawing-stick-figures#family-drawing-stick-figures-2.jpg) image.
 
 ### Acknowledgements
 
@@ -223,4 +328,3 @@ In case you want to pull the code from my Github repository:
 #### Disclaimer
 
 The content of this Website is provided for educational purposes only.
-
