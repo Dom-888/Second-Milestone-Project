@@ -44,7 +44,7 @@
 
     // Other global variables
     let wordToGuess; // The randomly drawn word
-    let output = []; // At the beginning of the game it's composed of a row of underscores, which will be gradually replaced by the letters guessed by the player. This variable is printed in the secretWord ID in HTML.
+    let output = []; // At the beginning of the game it's composed of a row of underscores, which will be gradually replaced by the letters guessed by the player. This variable is printed in the hiddenWord ID in HTML.
     let lives = 6; // Decreases by one when the player makes a mistake, triggers game.over when it reaches 0
     let startTime; // Records the game start time
     let finishTime; // Records the game end time
@@ -94,7 +94,7 @@
                     output.push("_");
                 }
             }
-            $("#secretWord").html(output);
+            $("#hiddenWord").html(output);
             $("#newRecord").hide();
         },
 
@@ -116,7 +116,7 @@
         // Play sound effect, update displayed word and score
         rightGuess: function () {
             successSound.play();
-            $("#secretWord").html(output);
+            $("#hiddenWord").html(output);
             points += 100;
             // Check winning condition
             if (output.toString().replace(/,/g, "") == wordToGuess) {

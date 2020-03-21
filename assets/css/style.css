@@ -47,7 +47,7 @@ body {
     background-position: center top;
 }
 
-#secretWord {
+#hiddenWord {
     font-family: "PatricK hand", sans-serif;
     font-size: 2.5em;
     letter-spacing: 2px;
