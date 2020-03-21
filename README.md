@@ -18,14 +18,14 @@ This is a digital version of the classic paper-and-pencil game, restyled to be m
 2. [**Features**](#features)
     - [**Existing Features**](#existing-features)
     - [**Features Left to Implement**](#features-left-to-implement)
-    - [**Remouved Features**](#remouved-features)
+    - [**Removed Features**](#removed-features)
 
 3. [**Technologies Used**](#technologies-used)
 
 4. [**Testing**](#testing)
     - [**Tested Devices**](#tested-devices)
     - [**Laptop Testing**](#laptop-testing)
-    - [**Smatphone Testing**](#smartphone-testing)
+    - [**Smartphone Testing**](#smartphone-testing)
     - [**Validation Services**](#validation-services)
     - [**Bugs Discovered**](#bugs-discovered)
 
@@ -35,7 +35,7 @@ This is a digital version of the classic paper-and-pencil game, restyled to be m
 7. [**Credits**](#credits)
     - [**Code**](#code)
     - [**Media**](#media)
-    - [**Acknowledgements**](#acknowledgements)
+    - [**Acknowledgments**](#acknowledgments)
 
 8. [**Disclaimer**](#disclaimer)
 
@@ -91,11 +91,11 @@ The buttons style is from [Bootstrap](https://getbootstrap.com/).
     - _Corners Buttons_: The buttons at the top corners of the page have a more subtle animation than the others to not distract the player, but are consistent with the style of other buttons.  
     - _On-Screen Keyboard_: Designed to look like an android keyboard with the dark theme.  
   
-3. **Colours**  
+3. **Colors**  
 The site uses light, pastel colors with good contrast between them.  
-    - _Sky blue (#81DAFC)_: Used as default button color, it was chosen because it is a more pastel version of the bootstrap primary button. The same color is used as fallback for the background.  
-    - _Bright orange (#D35400)_: Used to highlight the buttons when the user hovers them with the mouse, it creates a nice contrast with the idles buttons.  
-    - _Yellow paper (#FDF6E3 to #FDELAB)_: are used to create the effect of old paper and give the feeling of the paper-and-pencil game.  
+    - _Sky Blue (#81DAFC)_: Used as default button color, it was chosen because it is a more pastel version of the bootstrap primary button. The same color is used as fallback for the background.  
+    - _Bright Orange (#D35400)_: Used to highlight the buttons when the user hovers them with the mouse, it creates a nice contrast with the idles buttons.  
+    - _Paper-like Yellow (#FDF6E3 to #FDELAB)_: are used to create the effect of old paper and give the feeling of the paper-and-pencil game.  
   
 4. **Images**  
 The images used on the site were chosen with the goal of creating a light and cartoonesque atmosphere.  
@@ -104,8 +104,8 @@ The images used on the site were chosen with the goal of creating a light and ca
   
 5. **Sound Effects**  
 All sound effects are from [Freesound](https://freesound.org/).  
-    - _Success sound_: Played if the player chooses a correct letter, the sound style reminds the old arcade video games and contributes to creating a nostalgic atmosphere as well as to make the game more interactive.  
-    - _Pop sound_: Played if the player chooses a wrong letter, creates the illusion that one of the balloons in the image has burst.  
+    - _Success Sound_: Played if the player chooses a correct letter, the sound style reminds the old arcade video games and contributes to creating a nostalgic atmosphere as well as to make the game more interactive.  
+    - _Pop Sound_: Played if the player chooses a wrong letter, creates the illusion that one of the balloons in the image has burst.  
   
 6. **Animated Text**  
 The text animation is achieved with [Textillate](https://textillate.js.org/).
@@ -123,7 +123,7 @@ The wireframes were created using [Figma](https://www.figma.com/) and can be fou
   
 ## Features  
   
-The website use a one page design with modals that are shown at appropriate times based on user interaction.  
+The website uses a one-page design with modals that are shown at appropriate times based on user interaction.  
   
 ### Existing Features  
   
@@ -140,9 +140,9 @@ Allows the user to choose the category in which to play.
 3. **Gameplay Page**  
 The page where the game takes place.  
     - _Home Button_: Allows the user to return to the Landing Modal.  
-    - _Audio-Toggle Button_: Allows the user to enable / disable sound effects.  
+    - _Audio-Toggle Button_: Allows the user to enable/disable sound effects.  
     - _Hangman Figure_: It's the graphic component of the game as well as the main visual feedback. Occupies the top third of the page  
-    - _Word to Guess_: Initially hidden, but gradually revealed as the user guesses the letters. It is the element in which the user's attention is focused and therefore occupies the center of the page.  
+    - _Hidden Word_: Gradually revealed as the user guesses the letters. It is the element in which the user's attention is focused and therefore occupies the center of the page.  
     - _On-screen Keyboard_: It occupies the lower third of the page, a familiar position when playing on a mobile phone.  
   
 4. **Results Modal**  
@@ -154,43 +154,43 @@ Appears at the end of the game and shows the results.
 ### Features Left to Implement  
   
 1. **Global Leaderboard**  
-At present the game saves the player's best scores in the browser. The next step is to create a global leaderbord with the best scores of all players saved on a server. To do this I need to develop back-end skills not yet covered in the course.  
+At present, the game saves the player's best scores in the browser. The next step is to create a global leaderboard with the best scores of all players saved on a server. To do this I need to develop back-end skills not yet covered in the course.  
   
 2. **Additional Words to Guess**  
-Currently in the game there are 165 words to guess contained in arrays. It's possible to increase game longevity by increasing the number of words and storing them in JSON files, more suitable than arrays to contain large quantities of elements.  
+Currently, in the game there are 165 words to guess contained in arrays. It's possible to increase game longevity by increasing the number of words and storing them in JSON files, more suitable than arrays to contain large quantities of elements.  
   
 3. **Multiplayer**  
 It would be interesting to introduce a two player mode, where one chooses a word and the other has to guess it.  
   
-### Remouved Features  
+### Removed Features  
   
 1. **Tutorial**  
-In the wireframes, the project included a detailed description of how to play, I decided to remove it during development becouse people don't like tutorials and walls of text are even worse. On the other hand I tried to make learning the game as simple and intuitive as possible.  
+In the wireframes, the project included a detailed description of how to play, I decided to remove it during development because people don't like tutorials and walls of text are even worse. On the other hand, I tried to make learning the game as simple and intuitive as possible.  
   
 ## Technologies Used  
   
 - **Languages**  
-    - [HTMLS](https://devdocs.io/html/)
+    - [HTML5](https://devdocs.io/html/)
     - [CSS3](https://devdocs.io/css/) 
     - [JavaScript](https://devdocs.io/javascript/)
   
 - **Libraries**  
     - [JQuery](https://jquery.com) was used to simplify DOM manipulation.  
-    - [Google Fonts](https://fonts.google.com/) was used to import the fonts used in the website.  
-    - [Animate.css](https://daneden.github.io/animate.css/) was added as dependency of Textillate  
+    - [Google Fonts](https://fonts.google.com/) was used to import the fonts used on the website.  
+    - [Animate.css](https://daneden.github.io/animate.css/) was added as dependency of Textillate.
   
 - **Frameworks**  
     - [Bootstrap](https://getbootstrap.com/) was used extensively to create the responsive design, in particular the grid and the modal classes.  
   
 - **Plugins**  
     - [Textillate](https://textillate.js.org/) was used to animate the title and the "New Record" signal.  
-    - [Lettering.js](http://letteringjs.com/) was added as dependency of Textillate  
+    - [Lettering.js](http://letteringjs.com/) was added as dependency of Textillate.
   
 - **Toolkits**  
     - [Font Awesome](https://fontawesome.com/) was used to create button icons.  
   
 - **API**  
-    - [Web Storage](https://www.w3schools.com/html/html5_webstorage.asp) was used to save scores in the leaderbord.  
+    - [Web Storage](https://www.w3schools.com/html/html5_webstorage.asp) was used to save scores in the leaderboard.  
   
 - **Services**  
     - [GitPod](https://www.gitpod.io/) was the main IDE in which the project was developed.  
@@ -201,19 +201,19 @@ In the wireframes, the project included a detailed description of how to play, I
     - [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to test the CSS code.  
     - [JSHint](https://jshint.com/) was used to test the JavaScript code.  
     - [Autoprefixer](https://autoprefixer.github.io/) was used to add prefixes in the CSS for cross-browser support.  
-    - [Figma](https://www.figma.com/) was used for wireframing  
-    - [Online Audio Converter](https://online-audio-converter.com/it/) was used for simple sounds manipulation.  
-    - [Responsive Design](http://ami.responsivedesign.is/) was used to take the screenshot at the beginning of this document  
+    - [Figma](https://www.figma.com/) was used for wireframing.
+    - [Online Audio Converter](https://online-audio-converter.com/it/) was used to modify the volume and format of the sound effects.
+    - [Responsive Design](http://ami.responsivedesign.is/) was used to take the [screenshot](#the-hangman-game) placed at the beginning of this document. 
   
 - **Software**  
-    - [Paint.net](https://www.getpaint.net/) was used for simple images manipulation.  
+    - [Paint.net](https://www.getpaint.net/) was used to create the Hangman Image.
     - [Visual Studio Code](https://code.visualstudio.com/) was used for testing snippet of JS code.  
   
   
 ## Testing  
   
 ### Tested Devices  
-The website has been successfully tested with the following devices plus all those simulated by the [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools).    
+The website has been successfully tested with the following devices, plus all those simulated by the [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools).    
   
 ```  
 | -----------|---------------------------- |------------------------------|  
@@ -340,13 +340,12 @@ The following validation services were used to check the validity of the website
   
 ### Bugs Discovered  
 - _Problem with Modals_: By default, bootstrap modals are programmed to close when the user clicks outside them or presses the ESC key. This feature has been inhibited to avoid breaking the game.  
-- _Negative Score_: The score is calculated by adding points for each correct choice and removing them for each wrong choice, this could cause a negative score. Currently the minimum score is 0.  
+- _Negative Score_: Initially, the score was calculated by adding points for each correct choice and removing them for each wrong choice, potentially causing a negative score. This was modified to make the minimum score 0.
 - _Top Scores Order_: Initially, it could occur that by achieving the top scores in a specific sequence, they were shown in the wrong order (specifically the highest score was shown in second place). This was caused by an oversight in the JavaScript code, which was subsequently fixed.  
   
 ## Deployment  
   
-  
-This project was developed using [GitPod](https://www.gitpod.io/), committed to [Git](https://git-scm.com/) and pushed to [GitHub](https://github.com/) using the Gitpod Terminal.  
+This project was developed on [GitPod](https://www.gitpod.io/), committed to [Git](https://git-scm.com/) and pushed to [GitHub](https://github.com/) using the Gitpod Terminal.  
   
 To deploy Hangman to GitHub Pages from its [GitHub repository](https://github.com/Dom-888/Second-Milestone-Project), the following steps were taken:  
 1. Log in to Github  
@@ -382,7 +381,7 @@ In case you want to pull the code from my Github repository:
 - The "Success" sound was created by _Shinephoenixsto_ and was downloaded from [Freesound](https://freesound.org/).  
 - The image of the kid with the balloons was created by the author starting from [this](https://paintingvalley.com/family-drawing-stick-figures#family-drawing-stick-figures-2.jpg) image.  
   
-### Acknowledgements  
+### Acknowledgments 
   
 - I received assistance, feedback and encouragement from my mentor [Seun Owonikoko](https://github.com/seunkoko).  
 - I received help and suggestions from [Code Institute](https://codeinstitute.net/) tutors.  
