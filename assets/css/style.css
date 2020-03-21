@@ -68,7 +68,7 @@ body {
     margin: 0 7.5%;
 }
 
-#selectionModal .container{
+#selectionModal .container {
     border: none;
     padding: 0;
     margin: 0;
@@ -162,21 +162,30 @@ body {
 
 /*---------------Large Viewports---------------*/
 
+/* Tablets */
 @media only screen and (min-width: 401px) {
     body {
         background: url(../images/background-lg.jpg) #81DAFC; 
     }
-
     .btn-menu{
         font-size: 1.5em;
     }
 }
 
+/* Laptops */
 @media only screen and (min-width: 771px) {
     .btn-key {
         width: 2em;
         height: 2em;
         font-size: 1.5em;
         margin: 4px;
+    }
+}
+
+/* 4K Monitors */
+@media only screen and (min-width: 3001px) {
+    body {
+        background-repeat: no-repeat;
+        background-size: 100%;
     }
 }
