@@ -36,8 +36,11 @@
                         <button id="home" class="btn btn-menu"><i class="fa fa-home fa-lg" aria-hidden="true"></i></button>
                         <button id="audioToggle" class="btn btn-menu"><i class="fa fa-volume-up fa-lg" aria-hidden="true"></i></button>
                     </div>
+		    <!-- Hangman figure -->
                     <img id="figure" class ="border-cartoonish" src="assets/images/0-baloons.png" alt="Kid holding baloons">
+		    <!-- Hidden word  -->
                     <div id="secretWord">_</div>
+		    <!-- On-screen keyboard -->
                     <div id="keyboard">
                         <div class="first-row">
                             <button class="btn btn-key">Q</button>
@@ -80,9 +83,12 @@
         <div id="landingModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="landingModal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content border-cartoonish">
+		    <!-- Animated title -->
                     <h1 id="title">Hangman</h1>
+		    <!-- Game description -->
                     <h5>Try to guess the secret word by tapping on the letters. Good luck!</h5>
                     <button id="playButton" class="btn btn-lg btn-action border-cartoonish"><i class="fa fa-play-circle fa-lg" aria-hidden="true"></i><span>Play</span></button>
+		    <!-- User top scores -->
                     <h4>Top Scores</h4>
                     <div id="topScores" class="container">
                         <div class="row">
@@ -106,7 +112,9 @@
         <div id="selectionModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="selectionModal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content border-cartoonish">
+		    <!-- Modal header -->
                     <h2 class="text-center">Select a Theme</h2>
+		    <!-- Theme buttons -->
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-lg-6">
@@ -134,15 +142,21 @@
         </div>
 
         <!-- Results modal  -->
+	<!-- All the text of this modal (except for the new record message) is written by Javascript based on the outcome of the game. The text here is a placeholer. -->
         <div id="resultsModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="resultsModal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content border-cartoonish">
+		    <!-- Modal header -->
                     <h2 id="outcome">You shouldn't be able to see this</h2>
+		    <!-- The word to guess -->
                     <h4 id="solution">Obviously you're not a golfer.</h4>
                     <button id="continueButton" class="btn btn-lg btn-action border-cartoonish"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i><span>Continue</span></button>
-                    <h4 id="newRecord">New Record!</h4>
+                    <!-- New record message -->
+		    <h4 id="newRecord">New Record!</h4>
+		    <!-- Game score -->
                     <h4 id="score">Score: Over9k</h4>
-                    <h4 id="time">Time: 000</h4>
+		    <!-- Game time -->
+                    <h4 id="time">Time: 42s</h4>
                 </div>
             </div>
         </div>
