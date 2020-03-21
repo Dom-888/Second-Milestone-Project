@@ -170,44 +170,44 @@ In the wireframes, the project included a detailed description of how to play, I
 ## Technologies Used  
   
 - **Languages**  
-- [HTMLS](https://devdocs.io/html/)
-- [CSS3](https://devdocs.io/css/) 
-- [JavaScript](https://devdocs.io/javascript/)
+    - [HTMLS](https://devdocs.io/html/)
+    - [CSS3](https://devdocs.io/css/) 
+    - [JavaScript](https://devdocs.io/javascript/)
   
 - **Libraries**  
-- [JQuery](https://jquery.com) was used to simplify DOM manipulation.  
-- [Google Fonts](https://fonts.google.com/) was used to import the fonts used in the website.  
-- [Animate.css](https://daneden.github.io/animate.css/) was added as dependency of Textillate  
+    - [JQuery](https://jquery.com) was used to simplify DOM manipulation.  
+    - [Google Fonts](https://fonts.google.com/) was used to import the fonts used in the website.  
+    - [Animate.css](https://daneden.github.io/animate.css/) was added as dependency of Textillate  
   
 - **Frameworks**  
-- [Bootstrap](https://getbootstrap.com/) was used extensively to create the responsive design, in particular the grid and the modal classes.  
+    - [Bootstrap](https://getbootstrap.com/) was used extensively to create the responsive design, in particular the grid and the modal classes.  
   
 - **Plugins**  
-- [Textillate](https://textillate.js.org/) was used to animate the title and the "New Record" signal.  
-- [Lettering.js](http://letteringjs.com/) was added as dependency of Textillate  
+    - [Textillate](https://textillate.js.org/) was used to animate the title and the "New Record" signal.  
+    - [Lettering.js](http://letteringjs.com/) was added as dependency of Textillate  
   
 - **Toolkits**  
-- [Font Awesome](https://fontawesome.com/) was used to create button icons.  
+    - [Font Awesome](https://fontawesome.com/) was used to create button icons.  
   
 - **API**  
-- [Web Storage](https://www.w3schools.com/html/html5_webstorage.asp) was used to save scores in the leaderbord.  
+    - [Web Storage](https://www.w3schools.com/html/html5_webstorage.asp) was used to save scores in the leaderbord.  
   
 - **Services**  
-- [GitPod](https://www.gitpod.io/) was the main IDE in which the project was developed.  
-- [Git](https://git-scm.com/) was used for version control during the development process.  
-- [GitHub](https://github.com/) was used to host the project in a remote repository.  
-- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) was used to test responsiveness and quickly debug code.  
-- [HTML Validator](https://validator.w3.org/) was used to test the HTML code.  
-- [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to test the CSS code.  
-- [JSHint](https://jshint.com/) was used to test the JavaScript code.  
-- [Autoprefixer](https://autoprefixer.github.io/) was used to add prefixes in the CSS for cross-browser support.  
-- [Figma](https://www.figma.com/) was used for wireframing  
-- [Online Audio Converter](https://online-audio-converter.com/it/) was used for simple sounds manipulation.  
-- [Responsive Design](http://ami.responsivedesign.is/) was used to take the screenshot at the beginning of this document  
+    - [GitPod](https://www.gitpod.io/) was the main IDE in which the project was developed.  
+    - [Git](https://git-scm.com/) was used for version control during the development process.  
+    - [GitHub](https://github.com/) was used to host the project in a remote repository.  
+    - [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) was used to test responsiveness and quickly debug code.  
+    - [HTML Validator](https://validator.w3.org/) was used to test the HTML code.  
+    - [CSS Validator](https://jigsaw.w3.org/css-validator/) was used to test the CSS code.  
+    - [JSHint](https://jshint.com/) was used to test the JavaScript code.  
+    - [Autoprefixer](https://autoprefixer.github.io/) was used to add prefixes in the CSS for cross-browser support.  
+    - [Figma](https://www.figma.com/) was used for wireframing  
+    - [Online Audio Converter](https://online-audio-converter.com/it/) was used for simple sounds manipulation.  
+    - [Responsive Design](http://ami.responsivedesign.is/) was used to take the screenshot at the beginning of this document  
   
 - **Software**  
-- [Paint.net](https://www.getpaint.net/) was used for simple images manipulation.  
-- [Visual Studio Code](https://code.visualstudio.com/) was used for testing snippet of JS code.  
+    - [Paint.net](https://www.getpaint.net/) was used for simple images manipulation.  
+    - [Visual Studio Code](https://code.visualstudio.com/) was used for testing snippet of JS code.  
   
   
 ## Testing  
