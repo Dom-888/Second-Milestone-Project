@@ -32,7 +32,7 @@
 
     // Arrays containing the words to guess
     const animals = ["elephant", "crocodile", "rabbit", "eagle", "lion", "panda", "giraffe", "frog", "whale", "chameleon", "octopus", "dolphin", "zebra", "wolf", "fox", "falcon", "armadillo", "beetle", "koala", "jaguar", "bear", "horse", "cat", "dog", "buffalo", "beaver", "kangaroo", "sheep", "goose", "lama", "duck", "squirrel", "alpaca", "anaconda", "cobra", "albatross", "crow", "python", "shark", "deer", "seal", "tarantula", "grasshopper"];
-    const movies = ["jurassic park", "the big lebowski", "pulp fiction", "the wizard of oz", "forrest gump", "jaws", "apocalypse now", "the lord of the rings", "inception", "a clockwork orange", "full metal jacket", "fight club", "the matrix", "joker", "gladiator", "blade runner", "mad max", "alien", "back to the future", "star wars", "titanic", "lost in translation", "the terminator", "the exorcist", "predator", "rocky", "the godfather", "the dark knight", "django", "die hard", "the fifth element"]
+    const movies = ["jurassic park", "the big lebowski", "pulp fiction", "the wizard of oz", "forrest gump", "jaws", "apocalypse now", "the lord of the rings", "inception", "a clockwork orange", "full metal jacket", "fight club", "the matrix", "joker", "gladiator", "blade runner", "mad max", "alien", "back to the future", "star wars", "titanic", "lost in translation", "the terminator", "the exorcist", "predator", "rocky", "the godfather", "the dark knight", "django", "die hard", "the fifth element"];
     const sports = ["football", "cricket", "basketball", "hockey", "tennis", "volleyball", "golf", "rugby", "boxing", "skiing", "archery", "handball", "fencing", "marathon", "bowling", "judo", "karate", "cycling", "kickboxing", "diving", "wrestling", "triathlon", "badminton", "ping pong", "polo", "formula one"];
     const cities = ["tirana", "vienna", "brussels", "sofia", "prague", "copenhagen", "berlin", "athens", "budapest", "amsterdam", "monaco", "london", "rome", "sydney", "moscow", "stockholm", "instanbul", "dublin", "hong kong", "new york", "rio de janeiro", "bangkok", "paris", "dubai", "singapore", "tokyo", "venice", "huston", "chicago", "new delhi", "seoul", "sparta", "lisbon"];
     const jobs = ["sommelier", "taxi driver", "plumber", "developer", "trainer", "tailor", "cook", "teacher", "barista", "barber", "farmer", "lawyer", "nurse", "surgeon", "electrician", "journalist", "fireman", "engineer", "salesman", "lifeguard", "detective", "sailor", "dentist", "architect", "baker", "fisherman", "librarian", "mechanic", "secretary", "scientist", "postman", "judge"];
@@ -84,7 +84,7 @@
         initiate: function () {
             wordToGuess = wordToGuess.toUpperCase();
             $("#selectionModal").modal("hide");
-            $("#figure").attr("src", "assets/images/6_baloon(s).png");
+            $("#figure").attr("src", "assets/images/6-baloons.png");
             let d = new Date();
             startTime = d.getTime();
             for (const char of wordToGuess) {
@@ -129,7 +129,7 @@
         wrongGuess: function () {
             failSound.play();
             lives--;
-            $("#figure").attr("src", `assets/images/` + lives + `_baloon(s).png`);
+            $("#figure").attr("src", `assets/images/` + lives + `-baloons.png`);
             points -= 50;
             if (points < 0) { points = 0; }
             // Check losing condition
