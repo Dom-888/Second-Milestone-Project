@@ -217,15 +217,15 @@ The website has been successfully tested with the following devices plus all tho
   
 ```  
 | -----------|---------------------------- |------------------------------|  
-| Type | Device | Browsers |  
+| Type       | Device                      | Browsers                     |  
 | -----------|---------------------------- |------------------------------|  
-| Laptop | Asus FX753VD | Chrome, Firefox, Edge, Opera |  
-| Smartphone | Lenovo Moto G5S Plus | Chrome, Firefox |  
-| Smartphone | Samsung Galaxy note 10 plus | Chrome |  
-| Smartphone | Samsung Galaxy s9 | Chrome |  
-| Smartphone | Samsung Galaxy a50 | Firefox Focus |  
-| Smartphone | Asus ZenFone 4 max | Chrome |  
-| Smartphone | Apple iPhone 7 | Safari |  
+| Laptop     | Asus FX753VD                | Chrome, Firefox, Edge, Opera |  
+| Smartphone | Lenovo Moto G5S Plus        | Chrome, Firefox              |  
+| Smartphone | Samsung Galaxy note 10 plus | Chrome                       |  
+| Smartphone | Samsung Galaxy s9           | Chrome                       |  
+| Smartphone | Samsung Galaxy a50          | Firefox Focus                |  
+| Smartphone | Asus ZenFone 4 max          | Chrome                       |  
+| Smartphone | Apple iPhone 7              | Safari                       |  
 | -----------|---------------------------- |------------------------------|  
 ```  
   
