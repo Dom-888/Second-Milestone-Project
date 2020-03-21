@@ -203,7 +203,7 @@ In the wireframes, the project included a detailed description of how to play, I
     - [Autoprefixer](https://autoprefixer.github.io/) was used to add prefixes in the CSS for cross-browser support.  
     - [Figma](https://www.figma.com/) was used for wireframing.
     - [Online Audio Converter](https://online-audio-converter.com/it/) was used to modify the volume and format of the sound effects.
-    - [Responsive Design](http://ami.responsivedesign.is/) was used to take the [screenshot](#the-hangman-game) placed at the beginning of this document. 
+    - [Am I Responsive?](http://ami.responsivedesign.is/) was used to take the [screenshot](#the-hangman-game) placed at the beginning of this document. 
   
 - **Software**  
     - [Paint.net](https://www.getpaint.net/) was used to create the Hangman Image.
