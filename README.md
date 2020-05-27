@@ -2,7 +2,7 @@
 
 # [The Hangman Game](https://dom-888.github.io/Second-Milestone-Project/)
 
-This is a digital version of the classic paper-and-pencil game, restyled to be more child-friendly.
+A digital version of the classic paper-and-pencil game, restyled to be more child-friendly.
 
 !["Responsive Representation"](assets/images/screenshots/responsive-representation.png "Responsive Representation")
 
